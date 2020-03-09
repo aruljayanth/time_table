@@ -1,0 +1,302 @@
+<?php
+if (isset($_POST['submit'])){
+header("Location:teacher.php");
+}
+
+
+?>
+
+
+
+
+
+<!--<!DOCTYPE html>
+<html>
+<head>
+	<title>Time Table</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .form-group button{
+        	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+		<h1 class="heading text-center" > Time Table Management System </h1>
+		<hr size="20" width="80%" align="center" color="green">
+		<div class="form-row">
+            <div class="form-group col-md-3" class="card" >
+            	<button onclick="location.href = 'student.php';" class="float-left submit-button" ><figure><img src="images/st.png" class="img-circle" class="card-img-top" width="200" height="200" /><br></br><figcaption class="text-center"> Student </figcaption></figure></button></div>
+            <div class="form-group col-md-3">
+            	<button type="button" onclick="location.href = 'teacher.php';" class="float-left submit-button"><figure><img src="images/t.png" class="img-circle" width="200" height="200" /><br></br> <figcaption class="text-center"> Teacher</figcaption></figure></button></div>
+            <div class="form-group col-md-3">
+            	<button type="button" onclick="location.href = 'admin.php';" class="float-left submit-button"><figure><img src="images/admin_image.jpg" class="img-circle" width="200" height="200" /><br></br> <figcaption class="text-center"> Admin</figcaption></figure></button></div>
+            <div class="form-group col-md-3">
+            	<button type="button" onclick="location.href = 'classroom.php';" class="float-left submit-button"><figure><img src="images/cr.jpg" class="img-circle" width="200" height="200" /><br></br><figcaption class="text-center"> ClassRoom </figcaption></figure></button></div>
+            	</div>
+                </div>
+
+
+</body>
+</html>
+-->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!--
+Tinker Template
+http://www.templatemo.com/tm-506-tinker
+-->
+        <title>Time Table</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+        
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/fontAwesome.css">
+        <link rel="stylesheet" href="css/hero-slider.css">
+        <link rel="stylesheet" href="css/owl-carousel.css">
+        <link rel="stylesheet" href="css/templatemo-style.css">
+        <link rel="stylesheet" href="css/lightbox.css">
+        <style>
+            .button1 {border-radius: 2px;}
+        </style>
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand scroll-top"><em>A</em>lpha</a>
+                </div>
+                <!--/.navbar-header-->
+                <div id="main-nav" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#" class="scroll-top">Home</a></li>
+                        <li><a href="#" class="scroll-link" data-id="about">Student</a></li>
+                        <li><a href="#" class="scroll-link" data-id="portfolio">Teacher</a></li>
+                        <li><a href="#" class="scroll-link" data-id="blog">Admin</a></li>
+                        
+                    </ul>
+                </div>
+                <!--/.navbar-collapse-->
+            </nav>
+            <!--/.navbar-->
+        </div>
+        <!--/.container-->
+    </div>
+    <!--/.header-->
+
+
+    <div class="parallax-content baner-content" id="home">
+        <div class="container">
+            <div class="text-content">
+                <h2><em>Time</em> <span>Table</span> Management</h2>
+                <p>Here's A complete suite of the TimeTable Management system of Amrita.</p>
+                <div class="primary-white-button">
+                    <a href="#" class="scroll-link" data-id="about">Let's Start</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section id="about" class="page-section">
+        <div class="container">
+            <form action="" method="POST">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-item">
+                        <div style="width: 100px; height: 100px;margin-left:80px  ">
+                            <img src="img/st.png" alt="">
+                        </div>
+                        <h4>STUDENT</h4>
+                        <div class="line-dec"></div>
+                        <p>Hey Undergrad confused on what lecture today in class? Here'S Your class time table just a click away!</p>
+                        <div class="primary-blue-button">
+                            <a href="student.php" class="scroll-link" data-id="portfolio">ENTER</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-item">
+                        <div  style="width: 100px; height: 100px;margin-left:80px ">
+                            <img src="img/t.png" alt="">
+                        </div>
+                        <h4>TEACHER</h4>
+                        <div class="line-dec"></div>
+                        <p>Planning to meet any faculty for Project Discussions? Here's The place to check all the faculty timetable of our University</p>
+                        <div class="primary-blue-button">
+                            <a href = "teacher.php" class="scroll-link btn btn-info data-id="portfolio">ENTER</a>
+
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-item">
+                        <div  style="width: 100px; height: 100px;margin-left:80px" >
+                            <img src="img/cr.jpg" alt="">
+                        </div>
+                        <h4>CLASSROOM</h4>
+                        <div class="line-dec"></div>
+                        <p>Planning to schedule additional classes? heres how you could get to know the free Classrooms in our campus!</p>
+                        <div class="primary-blue-button">
+                            <a href="classroom.php" target="_self" class="scroll-link" data-id="portfolio">ENTER</a>
+                            <!--<button type="submit" name="submit" class="btn scroll-link btn-primary button1 ">Primary</button>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-item">
+                        <div  style="width: 100px; height: 100px;margin-left:80px ">
+                            <img src="img/admin_image.jpg" alt="">
+                        </div>
+                        <h4>ADMIN</h4>
+                        <div class="line-dec"></div>
+                        <p>This Admin section is strictly restricted only to the Admin of our university!You cant Break in</p>
+                        <div class="primary-blue-button">
+                            <a href="admin.php" class="scroll-link" data-id="portfolio" target= "_blank" role="button">LOG-IN &raquo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        </div>
+    </section>
+
+    
+
+   
+  
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="logo">
+                        <a class="logo-ft scroll-top" href="#"><em>A</em>lpha</a>
+                        <p>Copyright &copy; 2019
+                       <br></p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="location">
+                        <h4>Location</h4>
+                        <ul>
+                            <li>Amrita Vishwa Vidyapeetham<br></li>
+                            <li>Ettimadai <br>TamilNadu</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-12">
+                    <div class="contact-info">
+                        <h4>More Info</h4>
+                        <ul>
+                            <li><em>Phone</em>:9384445383</li>
+                            <li><em>Email</em>: timetablemgmt@alpha.co</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-12">
+                    <div class="connect-us">
+                        <h4>Get Social with us</h4>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google"></i></a></li>
+                            <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        // navigation click actions 
+        $('.scroll-link').on('click', function(event){
+            event.preventDefault();
+            var sectionID = $(this).attr("data-id");
+            scrollToID('#' + sectionID, 750);
+        });
+        // scroll to top action
+        $('.scroll-top').on('click', function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop:0}, 'slow');         
+        });
+        // mobile nav toggle
+        $('#nav-toggle').on('click', function (event) {
+            event.preventDefault();
+            $('#main-nav').toggleClass("open");
+        });
+    });
+    // scroll function
+    function scrollToID(id, speed){
+        var offSet = 50;
+        var targetOffset = $(id).offset().top - offSet;
+        var mainNav = $('#main-nav');
+        $('html,body').animate({scrollTop:targetOffset}, speed);
+        if (mainNav.hasClass("open")) {
+            mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+            mainNav.removeClass("open");
+        }
+    }
+    if (typeof console === "undefined") {
+        console = {
+            log: function() { }
+        };
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+body{
+
+background-color: #039BE5;
+  background-repeat: no-repeat;
+  background-size:cover;
+  
+}
+.container{
+	background-color: #40C4FF;
+}
+
+.container{
+    margin-top: 3%;
+    background-color: #40C4FF;
+    padding: 50px;
+    font-size:20px; 
+
+}
+h1{
+	margin-top: 20px;
+	font-size: 50px;
+}
+.form-row{
+	
+	margin-top: 10px;
+
+}
+.submit_button{
+	margin-top: 50px;
+}
+ .hello{
+ 	background-color: #b5e7a0;
+
+ }
+ .hello1{
+ 	font-size:20px; 
+ }
