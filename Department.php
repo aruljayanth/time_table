@@ -12,7 +12,7 @@ if (isset($_POST['submit'])){
     //$_SESSION['email']=$un;
     $b_name = mysqli_real_escape_string($conn, $_REQUEST['b_name']);
     $d_id = mysqli_real_escape_string($conn, $_REQUEST['d_name']);
-    
+
     $sql = "INSERT INTO department (department_name, block, department_id) VALUES ('$department_name', '$b_name', '$d_id')";
     if(mysqli_query($conn, $sql)){
     echo "
@@ -20,7 +20,7 @@ if (isset($_POST['submit'])){
  else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
 }
- 
+
 // Close connection
 mysqli_close($conn);
 }
@@ -47,7 +47,7 @@ ob_flush();
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="faculty.css">
-    
+
      <style>
         * {
             font-family: 'Roboto Slab', serif;
@@ -58,7 +58,7 @@ ob_flush();
 background-color: #01579B;
   background-repeat: no-repeat;
   background-size:cover;
-  
+
 }
 .container{
   background-color: #B3E5FC;
@@ -78,23 +78,23 @@ background-color: #01579B;
 				<label for="d_name">Department Name</label>
 				<input type="text" class="form-control" name="d_name" placeholder="enter the Department Name" required>
 				<br>
-				</div> 
+				</div>
 				<div class="form-group col-md-12">
 				<label for="did">Department ID</label>
 				<input type="text" class="form-control" name="d_id" placeholder="enter the Department ID" required>
 				<br>
-				</div> 
+				</div>
         <div class="form-group col-md-12">
         <label for="teacher_name">Block</label>
-        <input type="text" class="form-control" name="b_name" placeholder="enter the Block Name" required>
+        <input type="text" class="form-control" name="b_name" placeholder="the Block Name" required>
         <br>
-        </div> 
+        </div>
 
 
        <div class="modal-footer d-flex center-block justify-content-center">
         <input class="btn btn-default" type="submit" name="submit" value ="Add">
       </div>
-            
+
         </div>
       </form>
     </div>
