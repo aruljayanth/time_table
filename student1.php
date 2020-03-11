@@ -160,21 +160,15 @@ vertical-align: middle;\">";
 
     <div style="text-align: center;">
      <form method="post"> 
-    <input id="down" type="submit" name="download" value="Download">
-    <?php
-
-    use Spatie/Browsershot/Browsershot;
-$browser = new Browsershot();
-
-// Initialize a file URL to the vaiable 
-$url = 'http://127.0.0.1/soft/time_table/student1.php'; 
-// Use basename() function to return the base name of file 
-Browsershot::url($url)->save('C:\\Users\\v.shreebuvan\\Desktop\\image.png');
-?>
+    <input id="down" type="submit" name="download" value="Download" onclick="f()">
     </form>
-    
   </div>
-
   </div>
+  <script type="text/javascript">
+    function f()
+    {
+      window.print()
+    }
+  </script>
   </body>
   </html>

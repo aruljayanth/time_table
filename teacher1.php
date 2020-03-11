@@ -150,6 +150,17 @@ vertical-align: middle;background-color: #FFA726;\">";
     }
     echo "</table>";  
     ?>
+  <div style="text-align: center;">
+     <form method="post"> 
+    <input id="down" type="submit" name="download" value="Download" onclick="f()">
+    </form>
   </div>
+  </div>
+  <script type="text/javascript">
+    function f()
+    {
+      window.print()
+    }
+  </script>
   </body>
   </html>
