@@ -86,7 +86,7 @@ background-color: #01579B;
 				</div>
         <div class="form-group col-md-12">
         <label for="teacher_name">Block</label>
-        <input type="text" class="form-control" name="b_name" placeholder="e the Block Name" required>
+        <input type="text" class="form-control" name="b_name" placeholder="enter the Block Name" required>
         <br>
         </div>
 
