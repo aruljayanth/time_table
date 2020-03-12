@@ -29,20 +29,24 @@
     <div class="container">
 		<h1 class="heading text-center" > Time Table Management System </h1>
 		<hr size="20" width="80%" align="center" color="green">
-		<div class="form-row">
+		<div class="form-row" style="margin-left: 30px;">
 
-            <div class="form-group col-md-4" class="card"  >
+            <div class="form-group col-md-3" class="card"  >
             	<button onclick="location.href = 'student.php';" class="float-left submit-button" ><figure><img src="images/st.png" class="img-circle" class="card-img-top" width="200" height="200" /><br></br><figcaption class="text-center"> Student </figcaption></figure></button></div>
-            <div class="form-group col-md-4">
-                <button onclick="location.href = 'report.php';" class="float-left submit-button" ><figure><img src="images/st.png" class="img-circle" class="card-img-top" width="200" height="200" /><br></br><figcaption class="text-center"> Faculty-Course </figcaption></figure></button></div>
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-3">
+                <button onclick="location.href = 'report.php';" class="float-left submit-button" ><figure><img src="images/cr.jpg" class="img-circle" class="card-img-top" width="200" height="200" /><br></br><figcaption class="text-center"> Faculty-Course </figcaption></figure></button></div>
+            <div class="form-group col-md-3">
             	<button type="button" onclick="location.href = 'teacher.php';" class="float-left submit-button"><figure><img src="images/t.png" class="img-circle" width="200" height="200" /><br></br> <figcaption class="text-center"> Teacher</figcaption></figure></button></div>
-            <div class="form-group col-md-4">
-            	<button type="button" onclick="location.href = 'admin.php';" class="float-left submit-button"><figure><img src="images/admin_image.jpg" class="img-circle" width="200" height="200" /><br></br> <figcaption class="text-center"> Admin</figcaption></figure></button></div>
+            <div class="form-group col-md-3">
+            	<button type="button" onclick="location.href = 'admin.php';" class="float-left submit-button"><figure><img src="images/admin_image.jpg" class="img-circle" width="200" height="200" /><br></br> <figcaption class="text-center"> Admin</figcaption></figure></button></div></div>
+            	<div class="form-row" style="margin-left: 100px; margin-right: 30px;">
             <div class="form-group col-md-4">
             	<button type="button" onclick="location.href = 'classroom.php';" class="float-left submit-button"><figure><img src="images/cr.jpg" class="img-circle" width="200" height="200" /><br></br><figcaption class="text-center"> ClassRoom </figcaption></figure></button></div>
             <div class="form-group col-md-4">
-                <button type="button" onclick="location.href = 'feedback.php';" class="float-left submit-button"><figure><img src="images/cr.jpg" class="img-circle" width="200" height="200" /><br></br><figcaption class="text-center"> Feedback </figcaption></figure></button></div>
+                <button type="button" onclick="location.href = 'feedback.php';" class="float-left submit-button"><figure><img src="images/st.png" class="img-circle" width="200" height="200" /><br></br><figcaption class="text-center"> Feedback </figcaption></figure></button></div>
+            	
+            	<div class="form-group col-md-4">
+                <button type="button" onclick="location.href = 'classavail.php';" class="float-left submit-button"><figure><img src="images/cr.jpg" class="img-circle" width="200" height="200" /><br></br><figcaption class="text-center"> Class Availability </figcaption></figure></button></div>
             	</div>
                 </div>
 

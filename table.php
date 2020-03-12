@@ -8,6 +8,7 @@ $department_name=$_SESSION["department_name"];
 $year=$_SESSION["year"];
 $semester=$_SESSION["semester"];
 $section=$_SESSION["section"];
+$course_id=$_SESSION["course_id"];
 $row=5;
 $col=4;
 echo"<div class=\"container\">";
@@ -27,7 +28,6 @@ echo"<div class=\"container\">";
         case '4': echo "Thursday";
         break;
         case '5': echo "Friday";
-        break;
         default:
           # code...
           break;
@@ -37,6 +37,8 @@ echo"<div class=\"container\">";
       for($j=1;$j<=$col;$j++)
       {
         //$val="?i=".$i."&j=".$j."&dn=".$department_name."&year=".$year."&section=".$section."&semester=".$semester;
+
+
               if($i == '0'){
           echo "<td style=\"display:inline-block;width:25%;height:120px;text-align: center;
 vertical-align: middle;\">";
@@ -70,6 +72,14 @@ echo "<label>";
               $get_avail="SELECT avail FROM availability where department_name='$department_name' and year='$year' and semester='$semester' and section='$section' and slot='$j' and day='$i'";
     $get=mysqli_query($conn, $get_avail);
     $row = mysqli_fetch_assoc($get);
+
+
+
+
+
+
+
+
     if($row['avail']== "0"){
       echo "<td style=\"display:inline-block;width:25%;height:120px;text-align: center; align-items: center; padding:auto;
 vertical-align: middle; background-color: #FFCC80;\"><form method=\"POST\">
@@ -83,7 +93,7 @@ vertical-align: middle; background-color: #FFCC80;\"><form method=\"POST\">
     $get_coursename="SELECT course_name from course where course_id='".$row['course_id']."'";
      $get1=mysqli_query($conn, $get_coursename);
     $row1 = mysqli_fetch_assoc($get1);
-    $get_teachername="SELECT teacher_name from teacher where teacher_id='".$row['teacher_id']."'";
+    $get_teachername="SELECT teacher_name from teacher where teacher_id in (SELECT teacher_id FROM fac_course WHERE section = '".$row['section']."' AND course_id='".$row['course_id']."')";
      $get2=mysqli_query($conn, $get_teachername);
     $row2 = mysqli_fetch_assoc($get2);
     
@@ -98,7 +108,9 @@ vertical-align: middle; background-color: #FFCC80;\">";
        echo $row['roomno'];
       echo "</td>";
 
-      }}
+      }
+
+}
       }
       echo "</tr>"; 
     }

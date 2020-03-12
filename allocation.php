@@ -18,6 +18,20 @@ $semester=$_GET['semester'];
 $_SESSION['semester']=$semester;
 $section=$_GET['section'];
 $_SESSION['section']=$section;
+//$teacher_id=$_GET['teacher_id'];
+//$_SESSION['teacher_id']=$teacher_id;
+
+$department_name=$_SESSION["department_name"];
+$year=$_SESSION["year"];
+$slot_id=$_SESSION["slot_id"];
+$day_id=$_SESSION["day_id"];
+$semester=$_SESSION["semester"];
+$section=$_SESSION["section"];
+$block=$_SESSION["block"];
+$course_id=$_SESSION["course_id"];
+// $teacher_id=$_SESSION["teacher_id"];
+// $class_lab=$_SESSION["class_lab"];
+
 $akash="SELECT distinct course_id FROM course where department_name='$department_name' and semester='$semester'";
 $get=mysqli_query($conn, $akash);
 $option = '';
@@ -33,35 +47,123 @@ while($row = mysqli_fetch_assoc($get))
 	$options .= '<option value = "'.$row['block'].'">'.$row['block'].'</option>';
 }
 
-if (isset($_POST['submit'])){
+
+
+
+
+if (isset($_POST['submit1'])){
     //$teacher_id = mysqli_real_escape_string($conn, $_REQUEST['teacher']);
 $course_id = mysqli_real_escape_string($conn,$_REQUEST['courseid']);
 $_SESSION['course_id']=$course_id;
 
-$teachers="SELECT teacher_id FROM fac_course where section='$section' and department_id='$department_name' and year='$year' and course_id='$course_id'";
+$block = mysqli_real_escape_string($conn,$_REQUEST['block']);
+$_SESSION['block']=$block;
+
+ $teachers="SELECT teacher_id FROM fac_course where section='$section' and department_id='$department_name' and year='$year' and course_id='$course_id'";
+
+ $get=mysqli_query($conn, $teachers);
+ $row = mysqli_fetch_assoc($get);
+ $r=$row['teacher_id'];
+
+ //$teachers1="INSERT INTO timing VALUES('$room_no','$block','$slot_id' ,'$day_id','$r','$course_id','$department_name','$section','$year','$class_lab','$semester')";
+
+//$teachers1="INSERT INTO timing VALUES('A102','AB3','1','','CSE102','15CSE380','CSE','A','1','0','1')";
+
+//$get0=mysqli_query($conn, $teachers1);
+
+ $block= mysqli_real_escape_string($conn,$_REQUEST['block']);
+ $_SESSION['block']=$block;
+
+
+while($row = mysqli_fetch_assoc($get))
+{    $r=$row['teacher_id'];
+     $teacher_id=$r;
+     $_SESSION['teacher_id']=$teacher_id;
+}
+
+$class_lab=$_POST['class_lab'];
+
+
+$akash1="SELECT distinct roomno FROM classrooms where lab_class='$class_lab' and block='$block' order by roomno";
+$get=mysqli_query($conn, $akash1);
+$option1 = '';
+while($row = mysqli_fetch_assoc($get))
+{
+  $option1 .= '<option value = "'.$row['roomno'].'">'.$row['roomno'].'</option>';
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if (isset($_POST['submit'])){
+   
+
+  $teachers="SELECT teacher_id FROM fac_course where section='$section' and department_id='$department_name'";
 
 $get=mysqli_query($conn, $teachers);
 $row = mysqli_fetch_assoc($get);
 $r=$row['teacher_id'];
 
-$teachers1="INSERT INTO timing VALUES('A102','AB3','$slot_id' ,'$day_id','$r','$course_id','$department_name','$section','$year','0','$semester')";
-
-//$teachers1="INSERT INTO timing VALUES('A102','AB3','1','','CSE102','15CSE380','CSE','A','1','0','1')";
-
-$get0=mysqli_query($conn, $teachers1);
-
-$block= mysqli_real_escape_string($conn,$_REQUEST['block']);
-$_SESSION['block']=$block;
 
 
-while($row = mysqli_fetch_assoc($get))
-{    $r=$row['teacher_id'];
-     $_SESSION['teacher_id']=$r;
-}
-$class_lab=mysqli_real_escape_string($conn,$_REQUEST['class_lab']);
+$class_lab=$_POST['class_lab'];
 $_SESSION['class_lab']=$class_lab;
-header("Location: allocation1.php");
+
+ $room_no = mysqli_real_escape_string($conn,$_REQUEST['room_no']);
+
+
+$teachers1="INSERT INTO timing VALUES('$room_no','$block','$slot_id' ,'$day_id','$r','$course_id','$department_name','$section','$year','$class_lab','$semester')";
+
+$get=mysqli_query($conn, $teachers1);
+
+   
+if($semester%2==0){$s=2;}
+else {$s=1;}
+$sql1="UPDATE avail_class set avail= '1'where room_no='$room_no' and block='$block' and semester='$s' and  slot='$slot_id' and day='$day_id'";
+if(mysqli_query($conn, $sql1)){
+    //echo "recorded";
+
+   //header("Location:select_section1.php");
+
+    }
+ else{
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
 }
+$sql1="UPDATE availability set avail='1' where department_name='$department_name' and section='$section' and semester='$semester' and year='$year' and slot='$slot_id' and day='$day_id'";
+if(mysqli_query($conn, $sql1)){
+    //echo "recorded";
+
+   header("location:table.php");
+
+    }
+ else{
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
+}
+
+
+}
+
+
+
 //echo $r;
 mysqli_close($conn);
 ob_flush();
@@ -136,8 +238,8 @@ background-color: #01579B;
                 <label for="dname">Class/Lab:</label>
                 <select class="form-control" name="class_lab" placeholder="choose" required>
                 	<option value="" disabled selected>Choose</option>
-                	<option value="1">Class</option>
-                	<option value="0">Lab</option>
+                	<option value="0">Class</option>
+                	<option value="1">Lab</option>
                 </select>
                 <br>
                 
@@ -153,8 +255,20 @@ background-color: #01579B;
                 
             </div>
             
-        
+        <div class=" form-group col-md-12">
+        <button class="btn btn-default" type="submit" name="submit1">Show room</button>
+      </div>
    
+<div class="form-group col-md-12">
+                <label for="dname">Room/lab Number:</label>
+                <select class="form-control" name="room_no" placeholder="choose">
+                  <option value="" disabled selected>Choose</option>
+                  <?php echo $option1; ?>
+                </select>
+                <br>
+                
+            </div>
+
             <div class="form-group col-md-12">
       <div class=" modal-footer d-flex center-block justify-content-center ">
         <button class="btn btn-default" type="submit" name="submit">Save</button>

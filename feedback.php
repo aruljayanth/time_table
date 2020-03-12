@@ -19,9 +19,11 @@ if (isset($_POST['submit'])){
 
     $course_id = mysqli_real_escape_string($conn, $_REQUEST['feed1']);
 
+    $state = mysqli_real_escape_string($conn, $_REQUEST['state']);
+
     //header("Location:select_section.php");    
-$sql = "INSERT INTO feed (name, feedback)
-VALUES ('$teacher_id', '$course_id')";
+$sql = "INSERT INTO feed (name,state,feedback)
+VALUES ('$teacher_id', '$state', '$course_id')";
 
 if ($conn->query($sql) === TRUE) {
     echo "";
@@ -69,6 +71,16 @@ background-color: #01579B;
                   <input class="form-control" type="text" id="n1" name="name"><br>
                 <br>
 				</div>
+
+<div class="form-group col-md-12">
+                <label for="dname">Student/Teacher : </label>
+                <select class="form-control" name="state" placeholder="choose" required>
+					<option value="" disabled selected>Choose</option>
+                	<option value="Student">Student</option>
+                	<option value="Teacher">Teacher</option>				
+                </select>
+                <br>
+            </div>
 
 		<div class="form-group col-md-12">
 				<label for="dname">Feedback</label><br>

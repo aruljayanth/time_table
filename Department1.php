@@ -7,11 +7,11 @@ $conn = new mysqli("localhost:3306","root","","timetable");
     die("not connected:".$conn->connect_error);
 
 if (isset($_POST['submit'])){
+    
 
-
-
+    
     $department_name = mysqli_real_escape_string($conn, $_REQUEST['d_name']);
-
+    
     $sql = "DELETE FROM department where department_name='$department_name'";
     if(mysqli_query($conn, $sql)){
     echo "deleted";
@@ -35,14 +35,14 @@ while($row = mysqli_fetch_assoc($get))
 
 
 if (isset($_POST['submit1'])){
-
+    
 
     $teacher_id = mysqli_real_escape_string($conn, $_REQUEST['t_num']);
     //$_SESSION['email']=$un;
     $teacher_name = mysqli_real_escape_string($conn, $_REQUEST['t_name']);
     $max_credit = mysqli_real_escape_string($conn, $_REQUEST['m_credits']);
     $department_name = mysqli_real_escape_string($conn, $_REQUEST['d_name']);
-
+    
     $sql = "DELETE FROM department where department_name='$department_name'";
     if(mysqli_query($conn, $sql)){
     echo "deleted";
@@ -52,7 +52,7 @@ if (isset($_POST['submit1'])){
 
  else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
-
+    
 }}
 
 mysqli_close($conn);
@@ -78,7 +78,7 @@ ob_flush();
 background-color: #01579B;
   background-repeat: no-repeat;
   background-size:cover;
-
+  
 }
 .container{
   background-color: #B3E5FC;
@@ -92,20 +92,20 @@ background-color: #01579B;
         <label for="type" class="hello" ><strong>Enter the Particulars :</strong></label>
         <form action="" method="POST">
         <div class="form-row">
-
+            
 
             <div class="form-group col-md-12">
                 <label for="dname">Department Name</label>
-                <select class="form-control" name="d_name" placeholder="chose" required>
+                <select class="form-control" name="d_name" placeholder="choose" required>
                     <option value="" disabled selected>Choose</option>
                     <?php echo $option; ?>
                 </select>
                 <br>
-
+                
             </div>
-
-
-
+            
+            
+         
          <div class="form-group col-md-6">
             <div class=" modal-footer d-flex center-block justify-content-center ">
         <button class="btn btn-default" type="submit" name="submit">Remove</button>

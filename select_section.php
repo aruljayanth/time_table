@@ -31,6 +31,7 @@
 }
 if (isset($_POST['submit1'])){
     $section = mysqli_real_escape_string($conn, $_REQUEST['section']);
+    $_SESSION['section']=$section;
     $sql = "INSERT INTO fac_course (section, course_id,  teacher_id,department_id, year) VALUES ('$section', '$course_id', '$teacher_id', '$department_name', '$year')";
     if(mysqli_query($conn, $sql)){
     echo "recorded";
