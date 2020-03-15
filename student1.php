@@ -33,18 +33,37 @@ $year=$_SESSION["year"];
 
       body{
 
-background-color: #01579B;
+
   background-repeat: no-repeat;
   background-size:cover;
   
 }
 .container{
   background-color: #B3E5FC;
+  margin-bottom: 10%;
+  margin-top: 5%;
 }
-    
+      .bg1-image {
+  /* The image used */
+  background-image: url("images/c2.jpg");
+  
+      /* Add the blur effect */
+ 
+  
+  
+  /* Full height */
+  height: 100%; 
+  width: 100%;
+  margin-bottom: 25%;
+  position:relative;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
       </style>
 </head>
-<body>
+<body class="bg1-image">
   <div class="container">
     <?php
      $row=5;

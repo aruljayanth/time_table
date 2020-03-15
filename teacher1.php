@@ -57,9 +57,8 @@ $col=4;
       echo "<tr>";
       
       switch ($i) {
-        case '1': echo "<th>";
-        echo"Monday";echo"</th>";
-          break;
+        case '1': echo "<th>";echo"Monday";echo"</th>";
+        break;
         case '2': echo "<th>"; echo"Tuesday";echo"</th>";
         break;
         case '3': echo "<th>"; echo "Wednesday";echo"</th>";

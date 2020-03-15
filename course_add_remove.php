@@ -42,18 +42,66 @@ background-color: #01579B;
 .container{
   background-color: #B3E5FC;
 }
-
+.bg1-image {
+  /* The image used */
+  background-image: url("images/c2.jpg");
+  
+      /* Add the blur effect */
+ 
+  
+  
+  /* Full height */
+  padding-bottom: 75%;
+  height: 30%; 
+  width: 100%;
+  position:relative;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  .si{
+    margin-left: 30%;
+    margin-right: 8%;
+    align-content: center;
+    font-style: bold;
+    font-size: 15px;
+    color: white;
+  }
+        .bg-image {
+  /* The image used */
+  background-image: url("images/b.png");
+  border-radius: 50px;
+  border-bottom: 25px;
+  margin-bottom: 100px;
+      /* Add the blur effect */
+ 
+  
+  
+  /* Full height */
+  height: 10%; 
+  width: 90%;
+  margin-left: 5%;
+  padding-top: 1%;
+  margin-top: 5%;
+  padding-bottom: 5%;
+  position:relative;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
       </style>
 </head>
-<body>
-<div class="container">
+<body class="bg1-image">
+<div class="bg-image">
     <h1 class="heading text-center" > Time Table Management System </h1>
     <hr size="20" width="80%" align="center" color="green">
     <!-- Trigger the modal with a button -->
     <form action="" method="POST">
     <div class="form-row">
             <div class="col-md-6"><div class="text-center">
-  <button type="submit" class="btn btn-info btn-lg"  name="submit">Add Details</button></div></div>
+  <button type="submit" class="btn btn-info btn-lg" id="abcd" name="submit">Add Details</button></div></div>
   <div class="col-md-6"><div class="text-center">
   <button type="submit" class="btn btn-info btn-lg"  name="submit1">Remove Details</button></div>
 </div>

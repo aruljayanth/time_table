@@ -57,36 +57,102 @@ background-color: #01579B;
 }
 .container{
   background-color: #B3E5FC;
-}</style>
+}
+.bg1-image {
+  /* The image used */
+  background-image: url("images/c2.jpg");
+  
+      /* Add the blur effect */
+ 
+  
+  
+  /* Full height */
+  padding-bottom: 1%;
+  height: 20%; 
+  width: 100%;
+  position:relative;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  .s{
+    margin-left: 8%;
+    margin-right: 8%;
+    align-content: center;
+    font-style: bold;
+    font-size: 60px;
+    color: black;
+  }
+  .t1{
+    margin-left: 4%;
+    margin-right: 8%;
+    font-style: bold;
+    font-size: 30px;
+    color: black;
+  }
+  .si{
+    margin-left: 8%;
+    margin-right: 10%;
+    align-content: center;
+    font-style: bold;
+    font-size: 15px;
+    color: white;
+  }
+        .bg-image {
+  /* The image used */
+  background-image: url("images/b.png");
+  border-radius: 50px;
+  margin-bottom: 50px;
+      /* Add the blur effect */
+ 
+  
+  
+  /* Full height */
+  height: 10%; 
+  width: 90%;
+  margin-left: 5%;
+  padding-top: 1%;
+  margin-top: 5%;
+  padding-bottom: 10%;
+  position:relative;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  </style>
 </head>
-<body>
-<div class="container">
-		<h1 class="heading text-center" > Feedback </h1>
+<body class="bg1-image">
+<div class="bg-image">
+		<h1 class="s text-center" > Feedback </h1>
 		<hr size="20" width="75%" align="center" color="green">
-		<label for="type"  ><strong>Enter the details :</strong></label><br><br>
+		<label for="type" class="t1"  ><strong>Enter the details :</strong></label><br><br>
 		<form name="forms" action="" method="POST">
 	
-		<div class="form-group col-md-12">
+		<div class="si col-md-10">
 				<label for="dname">Name</label><br>
-                  <input class="form-control" type="text" id="n1" name="name"><br>
+                  <input class="form-control" type="text" id="n1" name="name" placeholder="Name" required><br>
                 <br>
 				</div>
 
-<div class="form-group col-md-12">
-                <label for="dname">Student/Teacher : </label>
-                <select class="form-control" name="state" placeholder="choose" required>
-					<option value="" disabled selected>Choose</option>
+<div class="si col-md-10">
+                <label for="dname">Student/Teacher </label>
+                <select class="form-control" name="state" required>
+					<option value="" disabled selected >Choose</option>
                 	<option value="Student">Student</option>
                 	<option value="Teacher">Teacher</option>				
                 </select>
                 <br>
+                <br>
             </div>
 
-		<div class="form-group col-md-12">
+		<div class="si col-md-10">
 				<label for="dname">Feedback</label><br>
-                  <input class="form-control" type="text" id="n1" name="feed1"><br>
+                  <input class="form-control" type="text" id="n1" name="feed1" placeholder="Feedback" required><br>
                 <br>
 				</div>
+       
 
 				<div style="text-align: center;">
 					<input id="s" type="submit" name="submit" onclick="f1()">
@@ -96,7 +162,7 @@ background-color: #01579B;
     <script type="text/javascript">
     	function f1()
     	{
-    		alert('Thank you for your feedback')
+    		alert('Thank you for your valuable feedback')
     	}
     </script>
 </body>

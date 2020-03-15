@@ -52,19 +52,64 @@ background-color: #01579B;
 .container{
   background-color: #B3E5FC;
 }
+ .bg1-image {
+  /* The image used */
+  background-image: url("images/c2.jpg");
+  
+      /* Add the blur effect */
  
+  
+  
+  /* Full height */
+  height: 100%; 
+  width: 100%;
+  position:relative;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  .si{
+    margin-left: 35%;
+    margin-right: 8%;
+    align-content: center;
+    font-style: bold;
+    font-size: 15px;
+    color: white;
+  }
+        .bg-image {
+  /* The image used */
+  background-image: url("images/b.png");
+  border-radius: 50px;
+  border-bottom: 25px;
+  margin-bottom: 250px;
+      /* Add the blur effect */
+ 
+  
+  
+  /* Full height */
+  height: 10%; 
+  width: 90%;
+  margin-left: 5%;
+  padding-bottom: 9%;
+  position:relative;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
     </style>
 </head>
-<body>
-	<div class="container">
-		<h1 class="heading text-center" > Faculty Course Report </h1>
+<body class="bg1-image">
+	<div class="bg-image">
+		<h1 class="heading text-center" > <p style="color: black; padding-top: 5%;"> Faculty Course Report</p> </h1>
 		<hr size="20" width="75%" align="center" color="green">
-		<label for="type" style="margin-bottom: 30px; text-align: center;" class="hello" ><strong>Teacher Name: <?php echo $teacher_name; ?></strong></label>
+		<label for="type" style="margin-bottom: 30px; text-align: center;" class="si" ><strong><p style="color: black; font-size: 30px;padding-top: 5%;text-align: center;">Teacher Name :  <?php echo $teacher_name; ?></p></strong></label>
 		<?php
 
 		echo "<table class=\" table table-bordered\">";
-		echo "<tr> <th>Course Name</th> <th> Credits </th></tr>";
-		$akash="SELECT * FROM fac_course where teacher_id='$teacher_id'";
+		echo "<p style='padding-left:5%;'><tr> <th><p style='color: white;'> Course Name </p></th> <th><p style='color: white;'> Credits </p></th></tr></p>";
+		$akash="SELECT distinct(course_id) FROM fac_course where teacher_id='$teacher_id'";
 $get=mysqli_query($conn, $akash);
 
 while($row = mysqli_fetch_assoc($get))
@@ -74,11 +119,11 @@ while($row = mysqli_fetch_assoc($get))
 $get1=mysqli_query($conn, $akash1);
 $row1 = mysqli_fetch_assoc($get1);
   $a= $row1['credits'];
-  echo "<td> $o </td>";
-  echo "<td> $a </td>";
-  echo "</tr>";
-
+  echo "<td><p style='color: white;'> $o </p></td>";
+  echo "<td><p style='color: white;'> $a </p></td>";
 }
+
+echo "</tr>";
 		?>
 	</div>
 </body>

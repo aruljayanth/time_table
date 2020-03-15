@@ -90,14 +90,62 @@ background-color: #01579B;
 .container{
   background-color: #B3E5FC;
 }
+.bg1-image {
+  /* The image used */
+  background-image: url("images/c2.jpg");
+  
+      /* Add the blur effect */
+ 
+  
+  
+  /* Full height */
+  height: 100%; 
+  width: 100%;
+  position:relative;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  .si{
+    margin-left: 35%;
+    margin-right: 8%;
+    align-content: center;
+    font-style: bold;
+    font-size: 15px;
+    color: white;
+  }
+        .bg-image {
+  /* The image used */
+  background-image: url("images/b.png");
+  border-radius: 50px;
+  border-bottom: 25px;
+  margin-bottom: 250px;
+      /* Add the blur effect */
+ 
+  
+  
+  /* Full height */
+  height: 10%; 
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 2%;
+  padding-top: 0.1%;
+  padding-bottom: 9%;
+  position:relative;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
 </style>
 </head>
-<body>
+<body class="bg1-image">
 
-<div class="container">
-    <h1 class="heading text-center" > Time Table Management System </h1>
+<div class="bg-image">
+    <h1 class="heading text-center" style="margin-bottom: 10px"> Time Table Management System </h1>
     <hr size="20" width="80%" align="center" color="green">
-    <div class="form-row">
+    <div class="form-row" style="padding-top: 5%;"> 
             <div class="col-md-6"><div class="text-center">
   <button type="button" class="btn btn-info btn-lg" id="clgid" data-toggle="modal" data-target="#modalLoginForm">College Admin</button></div></div>
   <div class="col-md-6"><div class="text-center">

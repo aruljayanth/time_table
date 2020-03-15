@@ -83,18 +83,81 @@ background-color: #01579B;
 .container{
   background-color: #B3E5FC;
 }
+.bg1-image {
+  /* The image used */
+  background-image: url("images/c2.jpg");
+  
+      /* Add the blur effect */
+ 
+  
+  
+  /* Full height */
+  padding-bottom: 75%;
+  height: 50%; 
+  width: 100%;
+  position:relative;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  .s{
+    margin-left: 20%;
+    margin-right: 8%;
+    align-content: center;
+    font-style: bold;
+    font-size: 60px;
+    color: black;
+  }
+  .t1{
+    margin-left: 4%;
+    margin-right: 8%;
+    font-style: bold;
+    font-size: 30px;
+    color: black;
+  }
+  .si{
+    margin-left: 8%;
+    margin-right: 10%;
+    align-content: center;
+    font-style: bold;
+    font-size: 15px;
+    color: white;
+  }
+        .bg-image {
+  /* The image used */
+  background-image: url("images/b.png");
+  border-radius: 50px;
+  margin-bottom: 50px;
+      /* Add the blur effect */
+ 
+  
+  
+  /* Full height */
+  height: 10%; 
+  width: 90%;
+  margin-left: 5%;
+  padding-top: 1%;
+  margin-top: 5%;
+  padding-bottom: 10%;
+  position:relative;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
 </style>
 </head>
-<body>
-<div class="container">
-        <h1 class="heading text-center" > Remove Department Details </h1>
+<body class="bg1-image">
+<div class="bg-image">
+        <h1 class="s" > Remove Department Details </h1>
         <hr size="20" width="75%" align="center" color="green">
-        <label for="type" class="hello" ><strong>Enter the Particulars :</strong></label>
+        <label for="type" class="t1" ><strong>Enter the Particulars :</strong></label>
         <form action="" method="POST">
         <div class="form-row">
             
 
-            <div class="form-group col-md-12">
+            <div class="si col-md-10">
                 <label for="dname">Department Name</label>
                 <select class="form-control" name="d_name" placeholder="choose" required>
                     <option value="" disabled selected>Choose</option>
@@ -103,18 +166,19 @@ background-color: #01579B;
                 <br>
                 
             </div>
-            
-            
+            <br>
+            <br>
+            </div>
          
-         <div class="form-group col-md-6">
+         <div class="si col-md-3">
             <div class=" modal-footer d-flex center-block justify-content-center ">
         <button class="btn btn-default" type="submit" name="submit">Remove</button>
       </div></div>
-      <div class="form-group col-md-6">
+      <div class="si col-md-3">
       <div class=" modal-footer d-flex center-block justify-content-center ">
         <button class="btn btn-default" type="submit" name="submit1">Remove more</button>
       </div>
-  </div></div>
+  </div>
         </div>
     </form>
     </div>

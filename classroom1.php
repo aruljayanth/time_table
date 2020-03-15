@@ -5,9 +5,10 @@ ob_start();
 $conn = new mysqli("localhost:3306","root","","timetable");
     if($conn->connect_error)
     die("not connected:".$conn->connect_error);
+$department_name=$_SESSION["department_name"];
 $block=$_SESSION["block"];
 $semester=$_SESSION["semester"];
-//$section=$_SESSION["section"];
+$section=$_SESSION["section"];
 $year=$_SESSION["year"];
 $room_no=$_SESSION["room_no"];
 
@@ -162,6 +163,19 @@ background-color: #01579B;
 <body>
   <div class="container">
     <?php
+
+$conn = new mysqli("localhost:3306","root","","timetable");
+    if($conn->connect_error)
+    die("not connected:".$conn->connect_error);
+$department_name=$_SESSION["department_name"];
+$block=$_SESSION["block"];
+$semester=$_SESSION["semester"];
+$section=$_SESSION["section"];
+$year=$_SESSION["year"];
+$room_no=$_SESSION["room_no"];
+
+
+
      $row=5;
  /*<span class="comments">//get number of columns inputted through text box
  </span>*/
@@ -206,7 +220,7 @@ $col=4;
               </span>*/
               //$val="?i=".$i."&j=".$j."&dn=".$department_name."&year=".$year."&section=".$section."&semester=".$semester;
               if($i == '0'){
-          echo "<th style=\"display:inline-block;width:25%;height:100px;text-align: center;
+          echo "<td style=\"display:inline-block;width:25%;height:100px;text-align: center;
 vertical-align: middle;\">";
            echo "<label style=\"margin-top:25px;\">";
           echo $j;
@@ -232,15 +246,15 @@ vertical-align: middle;\">";
           }
           //echo "</label>";
           echo "</label>";
-          echo "</th>";
+          echo "</td>";
         }
-              else{
-                if($semester%2==0){$semester1=2;}
-                else{$semester1=1;}
-
-              $get_avail="SELECT avail FROM avail_class where room_no='$room_no' /*and semester='$semester1'*/ and block='$block' and  slot='$j' and day='$i'";
+        else{
+              $val="?i=".$i."&j=".$j."&dn=".$department_name."&year=".$year."&section=".$section."&semester=".$semester;
+              $get_avail="SELECT avail FROM availability where department_name='$department_name' and year='$year' and semester='$semester' and section='$section' and slot='$j' and day='$i'";
     $get=mysqli_query($conn, $get_avail);
     $row = mysqli_fetch_assoc($get);
+
+
     if($row['avail']== "0"){
 
       echo "<td style=\"display:inline-block;width:25%;height:120px;text-align: center;
@@ -280,6 +294,7 @@ vertical-align: middle;background-color: #FFA726;\">";
 
       
     }
+  
                       /* <span class="comments">//close row
                        </span>*/
                      }
@@ -290,7 +305,10 @@ vertical-align: middle;background-color: #FFA726;\">";
     }
      /*  <span class="comments">//close table
        </span>*/
-    echo "</table>";  
+    echo "</table>"; 
+
+    mysqli_close($conn);
+ob_flush();
     ?>
   </div>
   </body>

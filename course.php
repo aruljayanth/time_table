@@ -91,27 +91,90 @@ background-color: #01579B;
 .container{
   background-color: #B3E5FC;
 }
+.bg1-image {
+  /* The image used */
+  background-image: url("images/c2.jpg");
+  
+      /* Add the blur effect */
+ 
+  
+  
+  /* Full height */
+  padding-bottom:1%;
+  height: 50%; 
+  width: 100%;
+  position:relative;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  .s{
+    margin-left: 30%;
+    margin-right: 8%;
+    align-content: center;
+    font-style: bold;
+    font-size: 60px;
+    color: black;
+  }
+  .t1{
+    margin-left: 4%;
+    margin-right: 8%;
+    font-style: bold;
+    font-size: 30px;
+    color: black;
+  }
+  .si{
+    margin-left: 8%;
+    margin-right: 10%;
+    align-content: center;
+    font-style: bold;
+    font-size: 15px;
+    color: white;
+  }
+        .bg-image {
+  /* The image used */
+  background-image: url("images/b.png");
+  border-radius: 50px;
+  margin-bottom: 50px;
+      /* Add the blur effect */
+ 
+  
+  
+  /* Full height */
+  height: 10%; 
+  width: 90%;
+  margin-left: 5%;
+  padding-top: 1%;
+  margin-top: 5%;
+  padding-bottom: 10%;
+  position:relative;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
 </style>
     </style>
 </head>
-<body>
-<div class="container">
-		<h1 class="heading text-center" > Add Course Details </h1>
+<body class="bg1-image">
+<div class="bg-image">
+		<h1 class="s" > Add Course Details </h1>
 		<hr size="20" width="75%" align="center" color="green">
-		<label for="type" class="hello" ><strong>Enter the Particulars :</strong></label>
+		<label for="type" class="t1" ><strong>Enter the Particulars :</strong></label>
     <form action="" method="POST">
 		<div class="form-row">
-			<div class="form-group col-md-12">
+			<div class="si col-md-10">
 				<label for="cid">Course ID</label>
 				<input type="text" class="form-control" name="c_id" placeholder="enter the Course ID" required>
 				<br>
 				</div> 
-				<div class="form-group col-md-12">
+				<div class="si col-md-10">
 				<label for="cname">Course Name</label>
 				<input type="text" class="form-control" name="c_name" placeholder="enter the Course Name" required>
 				<br>
 				</div> 
-        <div class="form-group col-md-6">
+        <div class="si col-md-10">
         <label for="dname">Department Name</label>
         <select class="form-control" name="d_name"  required>
           <option value="" disabled selected>Choose</option>
@@ -119,17 +182,17 @@ background-color: #01579B;
                 </select>
         <br>
         </div> 
-        <div class="form-group col-md-6">
+        <div class="si col-md-10">
         <label for="years">Year</label>
         <input type="text" class="form-control" name="year" placeholder="enter the Year" required>
         <br>
         </div> 
-        <div class="form-group col-md-6">
+        <div class="si col-md-10">
         <label for="credits">Credits</label>
         <input type="text" class="form-control" name="credit" placeholder="enter the Credits" required>
         <br>
         </div> 
-        <div class="form-group col-md-6">
+        <div class="si col-md-10">
         <label for="sem">Semester</label>
         <input type="text" class="form-control" name="semester" placeholder="choose" required>
         <br>

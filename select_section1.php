@@ -159,8 +159,8 @@ background-color: #01579B;
                   <?php echo $option; ?>
                 </select>
                 <br>
-                
             </div>
+
             <div class="form-group col-md-6">
                 <label style="font-size: 25px;" for="d">Semester</label>
                 <select class="form-control" name="semester" placeholder="choose" required>
@@ -168,7 +168,6 @@ background-color: #01579B;
                   <?php echo $options; ?>
                 </select>
                 <br>
-                
             </div>
             <div class="form-group col-md-12">
             <div class=" modal-footer d-flex center-block justify-content-center ">

@@ -1,7 +1,7 @@
 <?php
 session_start();
 ob_start();
-//echo "<h2>One step away to enter the world ---Stay Connected</h2>";
+
 $conn = new mysqli("localhost:3306","root","","timetable");
     if($conn->connect_error)
     die("not connected:".$conn->connect_error);

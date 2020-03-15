@@ -64,13 +64,49 @@ background-color: #01579B;
 .container{
   background-color: #B3E5FC;
 }
+  .bg1-image {
+  /* The image used */
+  background-image: url("images/c2.jpg");
   
+      /* Add the blur effect */
+ 
+  
+  
+  /* Full height */
+  height: 100%; 
+  width: 100%;
+  position:relative;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+        .bg-image {
+  /* The image used */
+  background-image: url("images/b.png");
+  border-radius: 50px;
+  
+      /* Add the blur effect */
+ 
+  
+  
+  /* Full height */
+  height: 10%; 
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  position:relative;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
       </style>
 </head>
-<body>
-<div class="container">
+<body class="bg1-image">
+<div class="bg-image" style="margin-top: 10%">
     <h1 class="heading text-center" > Time Table Management System </h1>
-    <hr size="20" width="80%" align="center" color="green">
+    <hr size="20" width="80%" align="center" color="green"><br><br><br>
     <!-- Trigger the modal with a button -->
     <div class="text-center">
   <button type="button" class="btn btn-info btn-lg"  data-toggle="modal" data-target="#myModal">Check Time Table</button></div>

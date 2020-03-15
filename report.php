@@ -99,21 +99,63 @@ background-color: #01579B;
 .container{
   background-color: #B3E5FC;
 }
+  .bg1-image {
+  /* The image used */
+  background-image: url("images/c2.jpg");
+  
+      /* Add the blur effect */
+ 
+  
+  
+  /* Full height */
+  height: 100%; 
+  width: 100%;
+  position:relative;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  .si{
+    margin-left: 2%;
+    margin-right: 8%;
+    align-content: center;
+  }
+        .bg-image {
+  /* The image used */
+  background-image: url("images/b.png");
+  border-radius: 50px;
+  
+      /* Add the blur effect */
+ 
+  
+  
+  /* Full height */
+  height: 10%; 
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  position:relative;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
     </style>
 </head>
-<body>
-<div class="container">
-		<h1 class="heading text-center" > Add  Details </h1>
+<body class="bg1-image">
+<div class="bg-image">
+		<h1 class="heading text-center" ><p style="color: black;"> Add  Details </p></h1>
 		<hr size="20" width="75%" align="center" color="green">
-		<label for="type" class="hello" ><strong>Enter the Particulars :</strong></label>
+		<label for="type" class="si" ><strong><p style="font-style: bold;font-size: 30px;color: white;">Enter the Particulars :</p></strong></label>
 		<form name="forms" action="" method="POST">
 		<div class="form-row">
 			
 				
 
 
-            <div class="form-group col-md-12">
-                <label for="dname">Department Name</label>
+            <div class="si col-md-5">
+                <label for="dname"><p style="font-style: bold;font-size: 15px;color: white;">Department Name</p></label>
                 <select class="form-control" id="d_name" name="d_name" placeholder="choose" required>
                 	<option value="" disabled selected>Choose</option>
                 	<?php echo $option; ?>
@@ -122,16 +164,16 @@ background-color: #01579B;
 
                 
             </div>
-            <div class="form-group col-md-12">
-        <label for="t_no">Teacher's Name</label>
+            <div class="si col-md-5">
+        <label for="t_no"><p style="font-style: bold;font-size: 15px;color: white;">Teacher's Name</p></label>
         <select class="form-control" id="d_name" name="t_num" placeholder="choose" required>
                   <option value="" disabled selected>Choose</option>
                   <?php echo $options; ?>
                 </select>
                 <br>
         </div> 
-        <div class="form-group col-md-12">
-        <label for="t_no">Semester</label>
+        <div class="si col-md-5">
+        <label for="t_no"><p style="font-style: bold;font-size: 15px;color: white;">Semester</p></label>
         <select class="form-control" id="d_name" name="sem" placeholder="choose" required>
                   <option value="" disabled selected>Choose</option>
                   <?php echo $options1; ?>
@@ -145,8 +187,8 @@ background-color: #01579B;
   </div>
             
             
-         
-         </div>
+
+       </div>
         </div>
     </form>
     </div>
