@@ -77,7 +77,7 @@ background-color: #01579B;
 		<div class="form-row" style="margin-top:-0.0002%;">
 			<div class="form-group col-md-6">
                 <label for="dname">Department Name</label>
-                <select class="form-control" id="d_name" name="d_name" placeholder="choose" required>
+                <select class="form-control" id="d_name" name="d_name" placeholder="chose" required>
                 	<option value="" disabled selected>Choose</option>
                 	<?php echo $option; ?>
                 </select>
@@ -87,7 +87,7 @@ background-color: #01579B;
             </div>
             <div class="form-group col-md-6">
                 <label for="years">Year</label>
-                <select class="form-control" id="year" name="year" placeholder="chse" required>
+                <select class="form-control" id="year" name="year" placeholder="choose" required>
                   <option value="" disabled selected>Choose</option>
                   <option value="1">first</option>
                   <option value="2">second</option>
