@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 ob_start();
 //echo "<h2>One step away to enter the world ---Stay Connected</h2>";
@@ -6,7 +6,7 @@ $conn = new mysqli("localhost:3306","root","","timetable");
     if($conn->connect_error)
     die("not connected:".$conn->connect_error);
 
-  
+
 $get_department_name="SELECT department_name FROM department";
 $get=mysqli_query($conn, $get_department_name);
 $option = '';
@@ -17,7 +17,7 @@ $option .= '<option value = "'.$row['department_name'].'" type="submit" name="su
 
 
 if (isset($_POST['submit'])){
-    
+
 
     //$teacher_id = mysqli_real_escape_string($conn, $_REQUEST['t_num']);
     //$_SESSION['teacher_id']=$teacher_id;
@@ -30,8 +30,8 @@ if (isset($_POST['submit'])){
     $_SESSION['department_name']=$department_name;
     header("Location:select_section1.php");
 
-    
-    
+
+
 }
 mysqli_close($conn);
 ob_flush();
@@ -54,14 +54,14 @@ ob_flush();
          font-size: 15px;
       }
       .hello1{
-  font-size:15px; 
+  font-size:15px;
  }
  body{
 
 background-color: #01579B;
   background-repeat: no-repeat;
   background-size:cover;
-  
+
 }
 .container{
   background-color: #B3E5FC;
@@ -83,27 +83,27 @@ background-color: #01579B;
                 </select>
                 <br>
 
-                
+
             </div>
             <div class="form-group col-md-6">
                 <label for="years">Year</label>
-                <select class="form-control" id="year" name="year" placeholder="choose" required>
+                <select class="form-control" id="year" name="year" placeholder="chse" required>
                   <option value="" disabled selected>Choose</option>
                   <option value="1">first</option>
                   <option value="2">second</option>
                   <option value="3">third</option>
                   <option value="4">fourth</option>
                 </select>
-                
+
                 <br>
-                
+
             </div>
             <div class="form-group col-md-12">
       <div class=" modal-footer d-flex center-block justify-content-center ">
         <button class="btn btn-default" type="submit1" name="submit">Next</button>
       </div>
   </div>
-            
+
         </div>
     </form>
 </div>
