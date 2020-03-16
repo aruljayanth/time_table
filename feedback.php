@@ -142,7 +142,7 @@ background-color: #01579B;
 
 		<div class="si col-md-10">
 				<label for="dname" id="name">Name</label><br>
-                  <input class="form-control" type="text" id="n2" name="name" placeholder="Name" required><br>
+                  <input class="form-control" type="text" id="n2" name="name" placeholder="Nam" required><br>
                 <br>
 				</div>
 
