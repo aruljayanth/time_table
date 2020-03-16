@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 
 
 if (isset($_POST['submit'])){
-    
+
 
     $teacher_id = mysqli_real_escape_string($conn, $_REQUEST['name']);
 
@@ -25,7 +25,7 @@ if (isset($_POST['submit'])){
 
     //$email1 = "https://maheshcr7.000webhostapp.com/mail.php?mail="+$email;
 
-    //header("Location:select_section.php");    
+    //header("Location:select_section.php");
 $sql = "INSERT INTO feed (name,state,feedback) VALUES ('$teacher_id', '$state', '$course_id')";
 
 if ($conn->query($sql) === TRUE)
@@ -37,7 +37,7 @@ if ($conn->query($sql) === TRUE)
     // curl_close($ch);
     echo "";
 
-} else 
+} else
 {
     echo "";
 }
@@ -63,7 +63,7 @@ $conn->close();
 background-color: #01579B;
   background-repeat: no-repeat;
   background-size:cover;
-  
+
 }
 .container{
   background-color: #B3E5FC;
@@ -71,14 +71,14 @@ background-color: #01579B;
 .bg1-image {
   /* The image used */
   background-image: url("images/c2.jpg");
-  
+
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
   padding-bottom: 1%;
-  height: 20%; 
+  height: 20%;
   width: 100%;
   position:relative;
   /* Center and scale the image nicely */
@@ -115,11 +115,11 @@ background-color: #01579B;
   border-radius: 50px;
   margin-bottom: 50px;
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
-  height: 10%; 
+  height: 10%;
   width: 90%;
   margin-left: 5%;
   padding-top: 1%;
@@ -139,10 +139,10 @@ background-color: #01579B;
 		<hr size="20" width="75%" align="center" color="green">
 		<label for="type" class="t1"  ><strong>Enter the details :</strong></label><br><br>
 		<form name="forms" action="" method="POST">
-	
+
 		<div class="si col-md-10">
 				<label for="dname" id="name">Name</label><br>
-                  <input class="form-control" type="text" id="n1" name="name" placeholder="Name" required><br>
+                  <input class="form-control" type="text" id="n2" name="name" placeholder="Name" required><br>
                 <br>
 				</div>
 
@@ -151,7 +151,7 @@ background-color: #01579B;
                 <select class="form-control" id="state" name="state" required>
 					<option value="" disabled selected >Choose</option>
                 	<option value="Student">Student</option>
-                	<option value="Teacher">Teacher</option>				
+                	<option value="Teacher">Teacher</option>
                 </select>
                 <br>
                 <br>
@@ -168,17 +168,17 @@ background-color: #01579B;
                   <input class="form-control" type="text" id="n1" name="feed1" placeholder="Feedback" required><br>
                 <br>
 				</div>
-       
+
 
 				<div style="text-align: center;">
 					<input class="btn btn-default" id="s" type="submit" name="submit" onclick="f1()">
 				</div>
-						
+
     </form>
     <script type="text/javascript">
     	function f1()
     	{
-        var name=document.getElementById('name').value;
+        var name=document.getElementById('n2').value;
         var state=document.getElementById('state').value;
         var email=document.getElementById('n0').value;
         var feed=document.getElementById('n1').value;
