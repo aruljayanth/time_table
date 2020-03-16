@@ -83,7 +83,7 @@ ob_flush();
 background-color: #01579B;
   background-repeat: no-repeat;
   background-size:cover;
-  
+
 }
 .container{
   background-color: #B3E5FC;
@@ -91,15 +91,15 @@ background-color: #01579B;
   .bg1-image {
   /* The image used */
   background-image: url("images/c2.jpg");
-  
+
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
   padding-top: 5%;
   padding-bottom: 7%;
-  height: 50%; 
+  height: 50%;
   width: 100%;
   position:relative;
   /* Center and scale the image nicely */
@@ -135,13 +135,13 @@ background-color: #01579B;
   /* The image used */
   background-image: url("images/b.png");
   border-radius: 50px;
-  
+
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
-  height: 10%; 
+  height: 10%;
   width: 90%;
   margin-left: 5%;
   margin-top: 5%;
@@ -162,7 +162,7 @@ background-color: #01579B;
     <hr size="20" width="80%" align="center" color="green">
     <!-- Trigger the modal with a button -->
 <div>
-  <a style="margin-left: 40%;margin-top: 5%;" data-toggle="modal" data-target="#myModal"  ><figure><br></br><figcaption > <b><p style="font-size: 20px; color: white; margin-bottom: 20%; margin-top: 5%">Check Time Table</p></b></figcaption></figure></a></div>
+  <a style="margin-left: 40%;margin-top: 5%;" data-toggle="modal" data-target="#myModal"  ><figure><br></br><figcaption > <strong><p style="font-size: 20px; color: white; margin-bottom: 20%; margin-top: 5%">Check Time Table</p></strong></figcaption></figure></a></div>
 
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
@@ -173,19 +173,19 @@ background-color: #01579B;
         <div class="modal-header">
           <h4 class="modal-title">Enter</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          
+
         </div>
         <div class="modal-body">
           <form action="" method="POST">
-             
+
           <label for="dname">Department Name</label>
                 <select class="form-control" id="d_name" name="d_name" placeholder="choose" required>
                   <option value="" disabled selected>Choose</option>
                   <?php echo $option; ?>
                 </select>
                 <br>
-              
-              
+
+
                 <label for="dname">Teacher Name</label>
                 <select class="form-control" id="d_name" name="t_name" placeholder="choose" required >
                   <option value="" disabled selected>Choose</option>
