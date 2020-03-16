@@ -145,7 +145,7 @@ time.sleep(5)
 # print(driver.current_url)
 # time.sleep(2)
 #
-# 
+#
 # #add deparmtment module
 # driver.find_element_by_id('abcd').click()
 # time.sleep(5)
@@ -160,13 +160,13 @@ time.sleep(5)
 # time.sleep(2)
 # driver.back()
 # time.sleep(5)
-
-#add/remove class/room
-driver.find_element_by_id('ac3').click()
-time.sleep(2)
-print(driver.current_url)
-driver.back()
-time.sleep(2)
+#
+# #add/remove class/room
+# driver.find_element_by_id('ac3').click()
+# time.sleep(2)
+# print(driver.current_url)
+# driver.back()
+# time.sleep(2)
 
 #add new semester
 driver.find_element_by_id('ac4').click()
