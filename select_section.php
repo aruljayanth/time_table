@@ -47,7 +47,8 @@ mysqli_close($conn);
 ob_flush();
 
 ?>
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<html lang="en">
 <html>
 <head>
 	<title>Allocate</title>
@@ -64,7 +65,7 @@ ob_flush();
 background-color: #01579B;
   background-repeat: no-repeat;
   background-size:cover;
-  
+
 }
 .container{
   background-color: #B3E5FC;
@@ -73,14 +74,14 @@ background-color: #01579B;
 .bg1-image {
   /* The image used */
   background-image: url("images/c2.jpg");
-  
+
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
   padding-bottom: 7%;
-  height: 50%; 
+  height: 50%;
   width: 100%;
   position:relative;
   /* Center and scale the image nicely */
@@ -117,11 +118,11 @@ background-color: #01579B;
   border-radius: 50px;
   margin-bottom: 50px;
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
-  height: 10%; 
+  height: 10%;
   width: 90%;
   margin-left: 5%;
   padding-top: 10%;
@@ -137,7 +138,7 @@ background-color: #01579B;
 </head>
 <body class="bg1-image">
 	<div class="bg-image">
-		
+
 		<form name="forms" action="" method="POST">
 		<div class="form-row">
 				<div class="si  col-md-10" style="padding-bottom: 5%;">

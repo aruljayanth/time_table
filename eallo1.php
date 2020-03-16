@@ -69,7 +69,8 @@ ob_flush();
 
 
 
-<!DOCTYPE html>
+ <!DOCTYPE HTML>
+ <html lang="en">
 <html>
 <head>
 	<title>allocation</title>
@@ -94,7 +95,7 @@ ob_flush();
 background-color: #01579B;
   background-repeat: no-repeat;
   background-size:cover;
-  
+
 }
 .container{
   background-color: #B3E5FC;
@@ -108,7 +109,7 @@ background-color: #01579B;
 		<hr size="20" width="75%" align="center" color="green">
 		<div>
 		<label class="hello1"> Day:&nbsp;&nbsp </label><label><?php echo $day_id; ?></label></div>
-		
+
 		<div>
 		<label class="hello1"> Slot:&nbsp;&nbsp </label><label><?php echo $slot_id; ?></label></div>
 		<div>
@@ -130,7 +131,7 @@ background-color: #01579B;
                 	<?php echo $option; ?>
                 </select>
                 <br>
-                
+
             </div>
             <div class="form-group col-md-6">
                 <label for="dname">Class/Lab:</label>
@@ -140,9 +141,9 @@ background-color: #01579B;
                 	<option value="0">Lab</option>
                 </select>
                 <br>
-                
+
             </div>
-            
+
                <div class="form-group col-md-12">
                 <label for="dname">Block</label>
                 <select class="form-control" name="block" placeholder="choose" required>
@@ -150,11 +151,11 @@ background-color: #01579B;
                 	<?php echo $options; ?>
                 </select>
                 <br>
-                
+
             </div>
-            
-        
-   
+
+
+
             <div class="form-group col-md-12">
       <div class=" modal-footer d-flex center-block justify-content-center ">
         <button class="btn btn-default" type="submit" name="submit">Save</button>

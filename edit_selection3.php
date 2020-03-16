@@ -39,7 +39,8 @@ mysqli_close($conn);
 ob_flush();
 
 ?>
-<html>
+<!DOCTYPE HTML>
+<html lang="en">
 <head>
     <title>Student</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -59,12 +60,12 @@ ob_flush();
 background-color: #01579B;
   background-repeat: no-repeat;
   background-size:cover;
-  
+
 }
 .container{
   background-color: #B3E5FC;
 }
-  
+
       </style>
 </head>
 <body>
@@ -79,16 +80,16 @@ background-color: #01579B;
   <div class="modal fade" id="myModal" role="dialog">
     <form action="" method="POST">
     <div class="modal-dialog">
-    
+
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title">Enter</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          
+
         </div>
         <div class="modal-body">
-          
+
                      <label for="dname">Department Name</label>
                 <select class="form-control" id="d_name" name="d_name" placeholder="choose" required>
                   <option value="" disabled selected>Choose</option>
@@ -113,7 +114,7 @@ background-color: #01579B;
           <button type="submit" class="btn btn-default" name="submit">View</button>
         </div>
       </div>
-      
+
     </div>
   </form>
   </div>

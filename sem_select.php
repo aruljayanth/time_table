@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 ob_start();
 //echo "<h2>One step away to enter the world ---Stay Connected</h2>";
@@ -6,7 +6,7 @@ $conn = new mysqli("localhost:3306","root","","timetable");
     if($conn->connect_error)
     die("not connected:".$conn->connect_error);
 
-  
+
 /*$get_department_name="SELECT department_name FROM department";
 $get=mysqli_query($conn, $get_department_name);
 $option = '';
@@ -17,7 +17,7 @@ $option .= '<option value = "'.$row['department_name'].'" type="submit" name="su
 
 
 if (isset($_POST['submit'])){
-    
+
 
     //$teacher_id = mysqli_real_escape_string($conn, $_REQUEST['t_num']);
     //$_SESSION['teacher_id']=$teacher_id;
@@ -50,7 +50,7 @@ while($row = mysqli_fetch_assoc($get))
           # code...
           break;
       }
-    
+
 $zero="0";
 $nulll="null";
 $department_name=$row['department_name'];
@@ -88,7 +88,7 @@ $block=$row['block'];
   echo "<script> window.alert(\"data already exists\")</script> ";
 }
 
-    
+
       }
     }
   }
@@ -142,7 +142,7 @@ $year=$row['year'];
   echo "<script> window.alert(\"data already exists\")</script> ";
 }
 
-    
+
       }
     }
 
@@ -151,15 +151,16 @@ $year=$row['year'];
    }
     header("Location:success.php");
 
-    
-    
+
+
 }
 mysqli_close($conn);
 ob_flush();
 ?>
 
 
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<html lang="en">
 <html>
 <head>
 	<title>Time Table</title>
@@ -175,7 +176,7 @@ ob_flush();
          font-size: 15px;
       }
       .hello1{
-  font-size:15px; 
+  font-size:15px;
  }
 
       body{
@@ -183,7 +184,7 @@ ob_flush();
 background-color: #01579B;
   background-repeat: no-repeat;
   background-size:cover;
-  
+
 }
 .container{
   background-color: #B3E5FC;
@@ -191,14 +192,14 @@ background-color: #01579B;
     .bg1-image {
   /* The image used */
   background-image: url("images/c2.jpg");
-  
+
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
   padding-bottom: 75%;
-  height: 50%; 
+  height: 50%;
   width: 100%;
   position:relative;
   /* Center and scale the image nicely */
@@ -236,11 +237,11 @@ background-color: #01579B;
   border-bottom: 25px;
   margin-bottom: 100px;
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
-  height: 10%; 
+  height: 10%;
   width: 90%;
   margin-left: 5%;
   padding-top: 1%;
@@ -261,16 +262,16 @@ background-color: #01579B;
 		<label for="type" style="margin-bottom: 30px;" class="t1" ><strong>Enter the Particulars :</strong></label>
 		<form name="forms" action="" method="POST">
 		<div class="form-row" style="margin-top:-0.0002%;">
-			
+
             <div class="si col-md-10">
                 <label for="years">Semester</label>
                 <select class="form-control" id="year" name="semester" placeholder="choose" required>
                   <option value="" disabled selected>Choose</option>
                   <option value="1">Odd Semester</option>
                   <option value="2">Even Semester</option>
-                  
+
                 </select>
-                
+
                 <br>
                 <br>
                 <br>
@@ -280,7 +281,7 @@ background-color: #01579B;
         <button class="btn btn-default" type="submit1" name="submit">Next</button>
       </div>
   </div>
-            
+
         </div>
     </form>
 </div>

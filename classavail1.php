@@ -23,10 +23,10 @@ echo '<div style=" padding-bottom:1%; width:10%;margin-left:44%;margin-right:44%
 while($row = mysqli_fetch_assoc($get))
 {
     $options = '<p style= "color:white;margin-bottom: 5%;font-size:30px; text-align:center;">'.$row['roomno'].'</p>';
-    
+
     echo $options;
     $i++;
-    
+
 }
 echo '</div>';
 echo '<p style="text-align:center;font-size:20px;color:white;"><strong>Available Rooms Count :  '.$i.'</strong></p><br><br><br>';
@@ -42,7 +42,8 @@ ob_flush();
 
 
 
-<html>
+<!DOCTYPE HTML>
+<html lang="en">
 <head>
     <title>Availability</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -62,7 +63,7 @@ ob_flush();
 background-color: #01579B;
   background-repeat: no-repeat;
   background-size:cover;
-  
+
 }
 .container{
   background-color: #B3E5FC;
@@ -70,14 +71,14 @@ background-color: #01579B;
         .bg1-image {
   /* The image used */
   background-image: url("images/c2.jpg");
-  
+
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
   padding-bottom: 50%;
-  height: 50%; 
+  height: 50%;
   width: 100%;
   position:relative;
   /* Center and scale the image nicely */
@@ -115,11 +116,11 @@ background-color: #01579B;
   border-bottom: 25px;
   margin-bottom: 100px;
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
-  height: 10%; 
+  height: 10%;
   width: 90%;
   margin-left: 5%;
   padding-top: 1%;
@@ -141,17 +142,17 @@ background-color: #01579B;
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  background: #f1f1f1;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888; 
+  background: #888;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+  background: #555;
 }
 </style>
 </head>

@@ -14,7 +14,8 @@ mysqli_close($conn);
 ob_flush();
 
 ?>
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<html lang="en">
 <html>
 <head>
 	<title>Time Table</title>
@@ -31,7 +32,7 @@ ob_flush();
 background-color: #01579B;
   background-repeat: no-repeat;
   background-size:cover;
-  
+
 }
 .container{
   background-color: #B3E5FC;
@@ -39,14 +40,14 @@ background-color: #01579B;
 .bg1-image {
   /* The image used */
   background-image: url("images/c2.jpg");
-  
+
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
   padding-bottom: 7%;
-  height: 50%; 
+  height: 50%;
   width: 100%;
   position:relative;
   /* Center and scale the image nicely */
@@ -83,11 +84,11 @@ background-color: #01579B;
   border-radius: 50px;
   margin-bottom: 50px;
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
-  height: 10%; 
+  height: 10%;
   width: 90%;
   margin-left: 5%;
   padding-top: 1%;
@@ -107,13 +108,13 @@ background-color: #01579B;
 		<hr size="20" width="75%" align="center" color="green">
 		<label class="t1" style="margin-left: 15%"><strong>Enter the Particulars :</strong></label>
 		<form action="" method="POST">
-			
+
 		<div class="form-row">
 			<div class="si col-md-10">
 			<label for="t_no" style="margin-left: 15%;font-size: 20px;padding-bottom: 3%">No of slots:</label></div>
 				<div class="si col-md-8">
 				<input type="number" style="margin-left: 20%" class="si col-md-10" name="n_slot" id="n" min="1" max="4" placeholder="Enter the no of slots" required>
-				</div> 
+				</div>
         <div style="margin-left: 50%;padding-top: 5%">
         <button class="btn btn-default" type="button" name="submit" onclick="addMoreRows()">Next</button>
       </div>
@@ -121,10 +122,10 @@ background-color: #01579B;
 	</form>
 	<form id="slots">
 
-		
+
 	</form>
 	<table id="tbl_id" style="text-align:center" align="center" valign="top">
-        
+
     </table>
 </div>
 <script>
@@ -139,7 +140,7 @@ function addMoreRows() {
         	 window.location="success1.php";
         }
       }
-      
+
       function slot(x,rowsAdded){
 
       	if(x<=rowsAdded)
@@ -153,8 +154,8 @@ document.getElementById("slots").insertAdjacentHTML("afterbegin", `slot ${x} <in
 else if(x>rowsAdded){
 window.flag=1;}
 
- 
-      
+
+
       }
 
 

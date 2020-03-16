@@ -16,7 +16,8 @@ ob_flush();
 ?>
 
 
-<html>
+<!DOCTYPE HTML>
+<html lang="en">
 <head>
     <title>Teacher</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -36,7 +37,7 @@ ob_flush();
 background-color: #01579B;
   background-repeat: no-repeat;
   background-size:cover;
-  
+
 }
 .container{
   background-color: #B3E5FC;
@@ -44,14 +45,14 @@ background-color: #01579B;
 .bg1-image {
   /* The image used */
   background-image: url("images/c2.jpg");
-  
+
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
   padding-bottom: 7%;
-  height: 50%; 
+  height: 50%;
   width: 100%;
   position:relative;
   /* Center and scale the image nicely */
@@ -74,11 +75,11 @@ background-color: #01579B;
   border-bottom: 25px;
   margin-bottom: 100px;
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
-  height: 10%; 
+  height: 10%;
   width: 90%;
   margin-left: 5%;
   padding-top: 1%;
@@ -107,7 +108,7 @@ background-color: #01579B;
 
 
 </form>
-  
+
 </div>
 </body>
 </html>

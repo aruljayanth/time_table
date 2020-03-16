@@ -39,7 +39,8 @@ mysqli_close($conn);
 ob_flush();
 
 ?>
-<html>
+<!DOCTYPE HTML>
+<html lang="en">
 <head>
     <title>Student</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -59,7 +60,7 @@ ob_flush();
 background-color: #01579B;
   background-repeat: no-repeat;
   background-size:cover;
-  
+
 }
 .container{
   background-color: #B3E5FC;
@@ -67,14 +68,14 @@ background-color: #01579B;
   .bg1-image {
   /* The image used */
   background-image: url("images/c2.jpg");
-  
+
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
   padding-bottom: 7%;
-  height: 50%; 
+  height: 50%;
   width: 100%;
   position:relative;
   /* Center and scale the image nicely */
@@ -111,11 +112,11 @@ background-color: #01579B;
   border-radius: 50px;
   margin-bottom: 50px;
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
-  height: 10%; 
+  height: 10%;
   width: 90%;
   margin-left: 5%;
   padding-top: 1%;
@@ -141,16 +142,16 @@ background-color: #01579B;
   <div class="modal fade" id="myModal" role="dialog">
     <form action="" method="POST">
     <div class="modal-dialog">
-    
+
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title">Enter</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          
+
         </div>
         <div class="modal-body">
-          
+
                      <label for="dname">Department Name</label>
                 <select class="form-control" id="d_name" name="d_name" placeholder="choose" required>
                   <option value="" disabled selected>Choose</option>
@@ -175,7 +176,7 @@ background-color: #01579B;
           <button type="submit" class="btn btn-default" name="submit">View</button>
         </div>
       </div>
-      
+
     </div>
   </form>
   </div>

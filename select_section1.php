@@ -37,10 +37,10 @@
 
       # code...
       break;
-    
+
 }
 
-  
+
  // header("Location:generate.php?dept=$department_name&year=$year&semester=$semester&section=$section");
   if(isset($_REQUEST['submit']))
   {
@@ -52,17 +52,17 @@
   /*<span class="comments">//get number of rows inputted through text box
   </span>*/
   /*$row=5;
- 
+
 $col=4;
-     
+
     echo "<table border='1' width='350px'>";
     for($i=1;$i<=$row;$i++)
     {
- 
+
       echo "<tr>";
       for($j=1;$j<=$col;$j++)
       {
-             
+
               $val="?i=".$i."&j=".$j."&dn=".$department_name."&year=".$year."&section=".$section."&semester=".$semester;
               $get_avail="SELECT avail FROM availability where department_name='$department_name' and year='$year' and semester='$semester' and section='$section' and slot='$j' and day='$i'";
     $get=mysqli_query($conn, $get_avail);
@@ -72,7 +72,7 @@ $col=4;
       echo "<div style=\"display:inline-block;width:25%;height:100px;overflow:scroll;\"><form method=\"POST\">
       <input type=\"text\" value=$val name=\"valz\" style=display:none;>
       <input type=submit name=\"submit1\" value="."Add"."></form></div>";
-      
+
       }
       else{
     $get_details="SELECT * FROM time where department_name='$department_name' and year='$year' and semester='$semester' and section='$section' and slot='$j' and day='$i'";
@@ -84,7 +84,7 @@ $col=4;
     $get_teachername="SELECT teacher_name from teacher where teacher_id='".$row['teacher_id']."'";
      $get2=mysqli_query($conn, $get_teachername);
     $row2 = mysqli_fetch_assoc($get2);
-    
+
         echo "<div style=\"display:inline-block;width:25%;height:100px;overflow:scroll;\">";
        echo $row['course_id'];
        echo "<br>";
@@ -97,11 +97,11 @@ $col=4;
 
       }
     }
-                      
+
       echo "</tr>";
-      
+
     }
-     
+
     echo "</table>";  */
   }
 
@@ -113,16 +113,17 @@ $site="allocation.php".$val;
 }
   /*if(isset($_POST['submit1']))
       {
-        
-        
+
+
       }*/
 
-	
+
 mysqli_close($conn);
 ob_flush();
 
 ?>
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<html lang="en">
 <html>
 <head>
 	<title>Allocate</title>
@@ -139,7 +140,7 @@ ob_flush();
 background-color: #01579B;
   background-repeat: no-repeat;
   background-size:cover;
-  
+
 }
 .container{
   background-color: #B3E5FC;
@@ -147,14 +148,14 @@ background-color: #01579B;
 .bg1-image {
   /* The image used */
   background-image: url("images/c2.jpg");
-  
+
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
   padding-bottom: 7%;
-  height: 50%; 
+  height: 50%;
   width: 100%;
   position:relative;
   /* Center and scale the image nicely */
@@ -191,11 +192,11 @@ background-color: #01579B;
   border-radius: 50px;
   margin-bottom: 50px;
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
-  height: 10%; 
+  height: 10%;
   width: 90%;
   margin-left: 5%;
   padding-top: 5%;
@@ -208,11 +209,11 @@ background-color: #01579B;
   background-size: cover;
   }
     </style>
-   
+
 </head>
 <body class="bg1-image">
 	<div class="bg-image">
-		
+
 		<form name="forms" action="" method="POST">
 		<div class="form-row">
 				<div class="si col-md-10">
@@ -236,7 +237,7 @@ background-color: #01579B;
             <div class=" modal-footer d-flex center-block justify-content-center ">
         <button class="btn btn-default" type="submit" name="submit">Next</button>
       </div></div>
-      
+
 </div>
 </form>
 </div>

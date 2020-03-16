@@ -6,23 +6,23 @@ $conn = new mysqli("localhost:3306","root","","timetable");
     if($conn->connect_error)
     die("not connected:".$conn->connect_error);
 
-  
+
 
 if (isset($_POST['submit'])){
-    
+
 
     $teacher_id = mysqli_real_escape_string($conn, $_REQUEST['t_num']);
     $_SESSION['teacher_id']=$teacher_id;
-    
+
     $department_name = mysqli_real_escape_string($conn, $_REQUEST['d_name']);
     $_SESSION['department_name']=$department_name;
     $semester = mysqli_real_escape_string($conn, $_REQUEST['sem']);
     $_SESSION['semester']=$semester;
-    
+
     header("Location:report1.php");
 
-    
-    
+
+
 }
 $akash="SELECT distinct teacher_name,teacher_id FROM teacher order by teacher_name";
 $get=mysqli_query($conn, $akash);
@@ -60,10 +60,10 @@ while($row = mysqli_fetch_assoc($get))
   $options .= '<option value = "'.$row['section'].'">'.$row['section'].'</option>';
 }
 }
-else { 
+else {
     echo "ERROR: Could not able to execute $sql. "
-                                .mysqli_error($conn); 
-} 
+                                .mysqli_error($conn);
+}
 }
 }*/
 
@@ -77,7 +77,8 @@ ob_flush();
 
 
 
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<html lang="en">
 <html>
 <head>
 	<title>Faculty</title>
@@ -94,7 +95,7 @@ ob_flush();
 background-color: #01579B;
   background-repeat: no-repeat;
   background-size:cover;
-  
+
 }
 .container{
   background-color: #B3E5FC;
@@ -102,13 +103,13 @@ background-color: #01579B;
   .bg1-image {
   /* The image used */
   background-image: url("images/c2.jpg");
-  
+
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
-  height: 100%; 
+  height: 100%;
   width: 100%;
   padding-bottom: 50%;
   position:relative;
@@ -126,14 +127,14 @@ background-color: #01579B;
   /* The image used */
   background-image: url("images/b.png");
   border-radius: 50px;
-  
+
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
   margin-top: 5%;
-  height: 10%; 
+  height: 10%;
   width: 90%;
   margin-left: 5%;
   margin-bottom: 5%;
@@ -152,8 +153,8 @@ background-color: #01579B;
 		<label for="type" class="si" ><strong><p style="font-style: bold;font-size: 30px;color: white;">Enter the Particulars :</p></strong></label>
 		<form name="forms" action="" method="POST">
 		<div class="form-row">
-			
-				
+
+
 
 
             <div class="si col-md-10">
@@ -164,7 +165,7 @@ background-color: #01579B;
                 </select>
                 <br>
 
-                
+
             </div>
             <div class="si col-md-10">
         <label for="t_no"><p style="font-style: bold;font-size: 15px;color: white;">Teacher's Name</p></label>
@@ -173,7 +174,7 @@ background-color: #01579B;
                   <?php echo $options; ?>
                 </select>
                 <br>
-        </div> 
+        </div>
         <div class="si col-md-10">
         <label for="t_no"><p style="font-style: bold;font-size: 15px;color: white;">Semester</p></label>
         <select class="form-control" id="d_name" name="sem" placeholder="choose" required>
@@ -181,14 +182,14 @@ background-color: #01579B;
                   <?php echo $options1; ?>
                 </select>
                 <br>
-        </div> 
+        </div>
             <div class="form-group col-md-12">
       <div class=" modal-footer d-flex center-block justify-content-center ">
         <button class="btn btn-default" type="submit1" name="submit">Next</button>
       </div>
   </div>
-            
-            
+
+
 
        </div>
         </div>

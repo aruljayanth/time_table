@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 	ob_start();
 	$conn = new mysqli("localhost:3306","root","","timetable");
@@ -74,7 +74,8 @@ if(mysqli_query($conn, $sql1)){
 
 ?>
 
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<html lang="en">
 <html>
 <head>
 	<title>allocation</title>
@@ -90,7 +91,7 @@ if(mysqli_query($conn, $sql1)){
          font-size: 20px;
     	}
     	.hello1{
- 	font-size:20px; 
+ 	font-size:20px;
  }
 
     body{
@@ -98,7 +99,7 @@ if(mysqli_query($conn, $sql1)){
 background-color: #01579B;
   background-repeat: no-repeat;
   background-size:cover;
-  
+
 }
 .container{
   background-color: #B3E5FC;
@@ -110,7 +111,7 @@ background-color: #01579B;
 	<div class="container">
 		<h1 class="heading text-center" > Add The Slot </h1>
 		<hr size="20" width="75%" align="center" color="green">
-	
+
 	<label for="type"  ><strong>Enter the Particulars :</strong></label>
 		<form action="" method="POST">
 		<div class="form-row">
@@ -121,7 +122,7 @@ background-color: #01579B;
                 	<?php echo $option; ?>
                 </select>
                 <br>
-                
+
             </div>
              <div class="form-group col-md-12">
       <div class=" modal-footer d-flex center-block justify-content-center ">

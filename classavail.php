@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 ob_start();
 //echo "<h2>One step away to enter the world ---Stay Connected</h2>";
@@ -6,7 +6,7 @@ $conn = new mysqli("localhost:3306","root","","timetable");
     if($conn->connect_error)
     die("not connected:".$conn->connect_error);
 
-  
+
 $get_block="SELECT distinct(block) FROM avail_classn";
 $get=mysqli_query($conn, $get_block);
 $option = '';
@@ -36,15 +36,15 @@ $options1 .= '<option value = "'.$row['day'].'" type="submit" name="submit3">'.$
 
 if (isset($_POST['submit']))
 {
-    
+
     $block = mysqli_real_escape_string($conn, $_REQUEST['block']);
     $_SESSION['block']=$block;
     $day = mysqli_real_escape_string($conn, $_REQUEST['day']);
     $_SESSION['day']=$day;
     $slot = mysqli_real_escape_string($conn, $_REQUEST['slot']);
     $_SESSION['slot']=$slot;
-    header("Location:classavail1.php"); 
-    
+    header("Location:classavail1.php");
+
 }
 
 mysqli_close($conn);
@@ -52,7 +52,8 @@ ob_flush();
 ?>
 
 
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<html lang="en">
 <html>
 <head>
   <title>Time Table</title>
@@ -68,14 +69,14 @@ ob_flush();
          font-size: 15px;
       }
       .hello1{
-  font-size:15px; 
+  font-size:15px;
  }
  body{
 
 background-color: #01579B;
   background-repeat: no-repeat;
   background-size:cover;
-  
+
 }
 .container{
   background-color: #B3E5FC;
@@ -83,14 +84,14 @@ background-color: #01579B;
     .bg1-image {
   /* The image used */
   background-image: url("images/c2.jpg");
-  
+
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
   padding-bottom: 1%;
-  height: 50%; 
+  height: 50%;
   width: 100%;
   position:relative;
   /* Center and scale the image nicely */
@@ -128,11 +129,11 @@ background-color: #01579B;
   border-bottom: 25px;
   margin-bottom: 100px;
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
-  height: 10%; 
+  height: 10%;
   width: 90%;
   margin-left: 5%;
   padding-top: 1%;
@@ -161,7 +162,7 @@ background-color: #01579B;
                 </select>
                 <br>
             </div>
-            
+
             <div class="si col-md-10">
                 <label for="d">Day</label>
                 <select class="form-control" name="day" placeholder="choose" required>
@@ -187,7 +188,7 @@ background-color: #01579B;
         <button class="btn btn-default" type="submit1" name="submit">Show</button>
       </div>
   </div>
-            
+
         </div>
     </form>
 </div>

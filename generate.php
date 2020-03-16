@@ -4,7 +4,8 @@ $year=$_GET['year'];
 $semester=$_GET['semester'];
 $section=$_GET['section'];
 ?>
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<html lang="en">
 <html>
 <head>
 	<title>Generate</title>

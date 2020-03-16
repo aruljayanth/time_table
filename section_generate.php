@@ -6,10 +6,10 @@ $conn = new mysqli("localhost:3306","root","","timetable");
     if($conn->connect_error)
     die("not connected:".$conn->connect_error);
 
-  
+
 
 if (isset($_POST['submit'])){
-    
+
 
     /*$teacher_id = mysqli_real_escape_string($conn, $_REQUEST['t_num']);
     $_SESSION['teacher_id']=$teacher_id;
@@ -34,13 +34,13 @@ if (isset($_POST['submit'])){
             case '4': $semester='7'; $semester1='8';
               # code...
               break;
-      
+
       default:
         # code...
         break;
     }
 
-    
+
 
     //header("Location:select_section.php");
     $sql = "INSERT INTO student VALUES ('$department_name', '$sections', '$semester', '$year')";
@@ -65,8 +65,8 @@ $sql = "INSERT INTO student VALUES ('$department_name', '$sections', '$semester1
   echo "<script> window.alert(\"data already exists\")</script> ";
 }
 
-    
-    
+
+
 }
 
 
@@ -91,15 +91,15 @@ while($row = mysqli_fetch_assoc($get))
   $options .= '<option value = "'.$row['section'].'">'.$row['section'].'</option>';
 }
 }
-else { 
+else {
     echo "ERROR: Could not able to execute $sql. "
-                                .mysqli_error($conn); 
-} 
+                                .mysqli_error($conn);
+}
 }
 }*/
 
 if (isset($_POST['submit1'])){
-    
+
 
     /*$teacher_id = mysqli_real_escape_string($conn, $_REQUEST['t_num']);
     $_SESSION['teacher_id']=$teacher_id;
@@ -124,13 +124,13 @@ if (isset($_POST['submit1'])){
             case '4': $semester='7'; $semester1='8';
               # code...
               break;
-      
+
       default:
         # code...
         break;
     }
 
-    
+
 
     //header("Location:select_section.php");
     $sql = "INSERT INTO student VALUES ('$department_name', '$sections', '$semester', '$year')";
@@ -155,8 +155,8 @@ $sql = "INSERT INTO student VALUES ('$department_name', '$sections', '$semester1
   echo "<script> window.alert(\"data already exists\")</script> ";
 }
 
-    
-    
+
+
 }
 mysqli_close($conn);
 
@@ -167,7 +167,8 @@ ob_flush();
 
 
 
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<html lang="en">
 <html>
 <head>
 	<title>Faculty</title>
@@ -184,7 +185,7 @@ ob_flush();
 background-color: #01579B;
   background-repeat: no-repeat;
   background-size:cover;
-  
+
 }
 .container{
   background-color: #B3E5FC;
@@ -192,14 +193,14 @@ background-color: #01579B;
 .bg1-image {
   /* The image used */
   background-image: url("images/c2.jpg");
-  
+
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
   padding-bottom: 7%;
-  height: 50%; 
+  height: 50%;
   width: 100%;
   position:relative;
   /* Center and scale the image nicely */
@@ -236,11 +237,11 @@ background-color: #01579B;
   border-radius: 50px;
   margin-bottom: 50px;
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
-  height: 10%; 
+  height: 10%;
   width: 90%;
   margin-left: 5%;
   padding-top: 1%;
@@ -262,7 +263,7 @@ background-color: #01579B;
 		<label for="type" class="t1" ><strong>Enter the Particulars :</strong></label>
 		<form name="forms" action="" method="POST">
 		<div class="form-row">
-			
+
 
             <div class="si col-md-10">
                 <label for="dname">Department Name</label>
@@ -272,7 +273,7 @@ background-color: #01579B;
                 </select>
                 <br>
 
-                
+
             </div>
             <div class="si col-md-10">
                 <label for="years">Year</label>
@@ -283,9 +284,9 @@ background-color: #01579B;
                   <option value="3">third</option>
                   <option value="4">fourth</option>
                 </select>
-                
+
                 <br>
-                
+
             </div>
             <div class="si col-md-10">
               <label for="years">Section</label>
@@ -301,9 +302,9 @@ background-color: #01579B;
         <button class="btn btn-default" type="submit1" name="submit1">Add more</button>
       </div>
   </div>
-            
-            
-         
+
+
+
          </div>
         </div>
     </form>

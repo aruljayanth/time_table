@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 ob_start();
 //echo "<h2>One step away to enter the world ---Stay Connected</h2>";
@@ -24,7 +24,8 @@ while($row = mysqli_fetch_assoc($get))
 
 ?>
 
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<html lang="en">
 <html>
 <head>
 	<title>Time Table</title>
@@ -40,14 +41,14 @@ while($row = mysqli_fetch_assoc($get))
          font-size: 15px;
       }
       .hello1{
-  font-size:15px; 
+  font-size:15px;
  }
  body{
 
 background-color: #01579B;
   background-repeat: no-repeat;
   background-size:cover;
-  
+
 }
 .container{
   background-color: #B3E5FC;
@@ -55,13 +56,13 @@ background-color: #01579B;
  .bg1-image {
   /* The image used */
   background-image: url("images/c2.jpg");
-  
+
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
-  height: 100%; 
+  height: 100%;
   width: 100%;
   position:relative;
   /* Center and scale the image nicely */
@@ -84,11 +85,11 @@ background-color: #01579B;
   border-bottom: 25px;
   margin-bottom: 250px;
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
-  height: 10%; 
+  height: 10%;
   width: 90%;
   margin-left: 5%;
   padding-bottom: 9%;

@@ -63,7 +63,8 @@ header("Location:teacher.php")
 
 
 
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<html lang="en">
 <html>
     <head>
         <meta charset="utf-8">
@@ -75,10 +76,10 @@ http://www.templatemo.com/tm-506-tinker
         <title>Time Table</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
-        
+
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -115,7 +116,7 @@ http://www.templatemo.com/tm-506-tinker
                         <li><a href="#" class="scroll-link" data-id="about">Student</a></li>
                         <li><a href="#" class="scroll-link" data-id="portfolio">Teacher</a></li>
                         <li><a href="#" class="scroll-link" data-id="blog">Admin</a></li>
-                        
+
                     </ul>
                 </div>
                 <!--/.navbar-collapse-->
@@ -169,7 +170,7 @@ http://www.templatemo.com/tm-506-tinker
                             <a href = "teacher.php" class="scroll-link btn btn-info data-id="portfolio">ENTER</a>
 
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
@@ -204,10 +205,10 @@ http://www.templatemo.com/tm-506-tinker
         </div>
     </section>
 
-    
 
-   
-  
+
+
+
 
     <footer>
         <div class="container">
@@ -264,7 +265,7 @@ http://www.templatemo.com/tm-506-tinker
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript">
     $(document).ready(function() {
-        // navigation click actions 
+        // navigation click actions
         $('.scroll-link').on('click', function(event){
             event.preventDefault();
             var sectionID = $(this).attr("data-id");
@@ -273,7 +274,7 @@ http://www.templatemo.com/tm-506-tinker
         // scroll to top action
         $('.scroll-top').on('click', function(event) {
             event.preventDefault();
-            $('html, body').animate({scrollTop:0}, 'slow');         
+            $('html, body').animate({scrollTop:0}, 'slow');
         });
         // mobile nav toggle
         $('#nav-toggle').on('click', function (event) {

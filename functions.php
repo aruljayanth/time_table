@@ -1,5 +1,5 @@
-s
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<html lang="en">
 <html>
 <head>
   <title>test</title>

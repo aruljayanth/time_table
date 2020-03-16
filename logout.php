@@ -14,17 +14,18 @@ if(mysqli_query($conn, $sql)){
     else{
     	echo "error:". mysqli_error($conn);
     }
-	
+
 	session_destroy();
 	ob_flush();
-	
+
 
 
 ?>
 
 
 
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<html lang="en">
 <html>
 <head>
 	<title>logout</title>
