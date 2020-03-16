@@ -83,84 +83,112 @@ time.sleep(5)
 driver.find_element_by_id('defaultForm-email').send_keys('mallikasachin@gmail.com')
 driver.find_element_by_id('defaultForm-pass').send_keys('admin')
 submit = driver.find_element_by_id('login').click()
-
+print(driver.current_url)
 #button in dept admin
 
 
 #add/remove faculty module
 driver.find_element_by_id('ac').click()
+print(driver.current_url)
 time.sleep(2)
 
 #add faculty module
 driver.find_element_by_id('abcd').click()
+print(driver.current_url)
 time.sleep(5)
 driver.back()
+print(driver.current_url)
 
 #remove faculty module
 driver.find_element_by_id('abcd1').click()
+print(driver.current_url)
 time.sleep(5)
 driver.back()
+print(driver.current_url)
 time.sleep(2)
 driver.back()
+print(driver.current_url)
 time.sleep(5)
 
 #add/remove course module
 driver.find_element_by_id('ac1').click()
+print(driver.current_url)
 time.sleep(2)
 
 
 #add course module
 driver.find_element_by_id('abcd').click()
+print(driver.current_url)
 time.sleep(5)
 driver.back()
+print(driver.current_url)
 
 #remove course module
 driver.find_element_by_id('abcd1').click()
+print(driver.current_url)
 time.sleep(5)
 driver.back()
+print(driver.current_url)
 time.sleep(2)
 driver.back()
+print(driver.current_url)
 time.sleep(5)
 
 #add/remove deparmtment module
 driver.find_element_by_id('ac2').click()
+print(driver.current_url)
 time.sleep(2)
 
 
 #add deparmtment module
 driver.find_element_by_id('abcd').click()
+print(driver.current_url)
 time.sleep(5)
 driver.back()
+print(driver.current_url)
 
 #remove deparmtment module
 driver.find_element_by_id('abcd1').click()
+print(driver.current_url)
 time.sleep(5)
 driver.back()
+print(driver.current_url)
 time.sleep(2)
 driver.back()
+print(driver.current_url)
 time.sleep(5)
 
 #add/remove class/room
 driver.find_element_by_id('ac3').click()
+print(driver.current_url)
 time.sleep(2)
 driver.back()
+print(driver.current_url)
 time.sleep(2)
 
 #add new semester
 driver.find_element_by_id('ac4').click()
+print(driver.current_url)
 time.sleep(2)
 driver.back()
+print(driver.current_url)
 time.sleep(2)
 
 #logout
 driver.find_element_by_id('ac5').click()
+print(driver.current_url)
+time.sleep(2)
 
 #Feedback
 driver.find_element_by_id('ab4').click()
+print(driver.current_url)
 time.sleep(5)
 driver.back()
+print(driver.current_url)
 
 #class availability
 driver.find_element_by_id('ab5').click()
+print(driver.current_url)
 time.sleep(5)
 driver.back()
+print(driver.current_url)
