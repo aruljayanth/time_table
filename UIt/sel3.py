@@ -12,13 +12,16 @@ driver.get(signup_link)
 #Bad email, good password # Expected:fail
 driver.find_element_by_id('clgid').click()
 time.sleep(5)
-email_field = driver.find_element_by_id('defaultForm-emai')
-email_field.send_keys('JohnDoe@gmail.com')
+driver.find_element_by_id('defaultForm-emai').send_keys('mallikasachin@gmail.com')
 
-password = 'P@ssword'
-password_field = driver.find_element_by_id('defaultForm-pas')
-password_field.send_keys(password)
-
+driver.find_element_by_id('defaultForm-pas').send_keys('admin')
+time.sleep(5)
 submit = driver.find_element_by_id('login1').click()
+
+if(driver.current_url == home_link):
+    print('Test passed')
+else:
+    print('Test failed')
 print(driver.current_url)
+
 driver.close()
