@@ -20,31 +20,80 @@ background-color: #01579B;
 .container{
   background-color: #B3E5FC;
 }
+.bg1-image {
+  /* The image used */
+  background-image: url("images/c2.jpg");
+  
+      /* Add the blur effect */
+ 
+  
+  
+  /* Full height */
+  padding-bottom: 0%;
+  height: 100%; 
+  width: 100%;
+  position:relative;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  .si{
+    margin-left: 30%;
+    margin-right: 8%;
+    align-content: center;
+    font-style: bold;
+    font-size: 15px;
+    color: white;
+  }
+        .bg-image {
+  /* The image used */
+  background-image: url("images/b.png");
+  border-radius: 50px;
+  border-bottom: 25px;
+  margin-bottom: 35px;
+      /* Add the blur effect */
+ 
+  
+  
+  /* Full height */
+  height: 10%; 
+  width: 90%;
+  margin-left: 5%;
+  padding-top: 1%;
+  margin-top: 5%;
+  padding-bottom: 1%;
+  position:relative;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  .col{
+    background-color : #ffd500;
+    font-style: bold;
+  }
     </style>
 </head>
-<body>
-	<div class="container">
-    <h1 class="heading text-center" > Time Table Management System </h1>
+<body class="bg1-image">
+	<div class="bg-image">
+    <h1 class="heading text-center" ><p style="color: black;"> Time Table Management System </h1>
     <hr size="20" width="80%" align="center" color="green">
 
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Timetable Generator</a>
+<nav class="bg-image">
+  <div class="si">
+    <div>
+      <a><p style="color: black;font-size: 300%;">Timetable Generator<br></p></a>
     </div>
-    <ul class="nav navbar-nav">
-      <li><a href="#">Home</a></li>
-      <li><a href="Faculty_course.php">Assign Courses</a></li>
-      <li><a href="section_generate.php">Generate Section</a></li>
-      <li><a href="slot_generate.php">Generate Slots</a></li>
-      <li><a href="edit_selection.php">Edit Slots</a></li>
-      <li><a href="delete1.php">Delete Table</a></li>
-      <li><a href="timetable_generate.php">Generate TimeTable</a></li>
-     
-
-      
-      <li><a href="logout.php">Logout</a></li>
+    <ul style ="margin-right: 50%;margin-left:1px;margin-top: 5%;">
+    <li class="col" style="border-radius: 50px;margin-right: 50%;padding-left: 5%" id=abc><a href="Faculty_course.php"><p style="color: white;font-size: 150%;">Assign Courses</p></a></li>
+      <li class="col" style="border-radius: 50px;margin-right: 50%;padding-left: 5%" id=abc1><a href="section_generate.php"><p style="color: white;font-size: 150%;">Generate Section</p></a></li>
+      <li class="col" style="border-radius: 50px;margin-right: 50%;padding-left: 5%" id=abc2><a href="slot_generate.php"><p style="color: white;font-size: 150%;">Generate Slots</p></a></li>
+      <li class="col"style="border-radius: 50px;margin-right: 50%;padding-left: 5%" id=abc3><a href="edit_selection.php"><p style="color: white;font-size: 150%;">Edit Slots</p></a></li>
+      <li class="col"style="border-radius: 50px;margin-right: 50%;padding-left: 5%" id=abc4><a href="delete1.php"><p style="color: white;font-size: 150%;">Delete Table</p></a></li>
+      <li class="col" style="border-radius: 50px;margin-right: 50%;padding-left: 5%" id=abc5><a href="timetable_generate.php"><p style="color: white;font-size: 150%;">Generate Table</p></a></li>
+      <li class="col" style="border-radius: 50px;margin-right: 50%;padding-left: 5%" id=abc6><a href="index1.php"><p style="color: white;font-size: 150%;">Logout</p></a></li>
     </ul>
   </div>
 </nav>

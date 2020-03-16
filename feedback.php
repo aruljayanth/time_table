@@ -21,14 +21,24 @@ if (isset($_POST['submit'])){
 
     $state = mysqli_real_escape_string($conn, $_REQUEST['state']);
 
-    //header("Location:select_section.php");    
-$sql = "INSERT INTO feed (name,state,feedback)
-VALUES ('$teacher_id', '$state', '$course_id')";
+    //$email = mysqli_real_escape_string($conn, $_REQUEST['email']);
 
-if ($conn->query($sql) === TRUE) {
+    //$email1 = "https://maheshcr7.000webhostapp.com/mail.php?mail="+$email;
+
+    //header("Location:select_section.php");    
+$sql = "INSERT INTO feed (name,state,feedback) VALUES ('$teacher_id', '$state', '$course_id')";
+
+if ($conn->query($sql) === TRUE)
+{
+    // $ch = curl_init();
+    // curl_setopt($ch, CURLOPT_URL, $email1);
+    // curl_setopt($ch, CURLOPT_HEADER, 0);
+    // curl_exec($ch);
+    // curl_close($ch);
     echo "";
 
-} else {
+} else 
+{
     echo "";
 }
 }
@@ -131,14 +141,14 @@ background-color: #01579B;
 		<form name="forms" action="" method="POST">
 	
 		<div class="si col-md-10">
-				<label for="dname">Name</label><br>
+				<label for="dname" id="name">Name</label><br>
                   <input class="form-control" type="text" id="n1" name="name" placeholder="Name" required><br>
                 <br>
 				</div>
 
 <div class="si col-md-10">
                 <label for="dname">Student/Teacher </label>
-                <select class="form-control" name="state" required>
+                <select class="form-control" id="state" name="state" required>
 					<option value="" disabled selected >Choose</option>
                 	<option value="Student">Student</option>
                 	<option value="Teacher">Teacher</option>				
@@ -146,6 +156,12 @@ background-color: #01579B;
                 <br>
                 <br>
             </div>
+
+<div class="si col-md-10">
+        <label for="dname">Email</label><br>
+                  <input class="form-control" type="Email" id="n0" name="email" placeholder="Email" required><br>
+                <br>
+        </div>
 
 		<div class="si col-md-10">
 				<label for="dname">Feedback</label><br>
@@ -155,14 +171,22 @@ background-color: #01579B;
        
 
 				<div style="text-align: center;">
-					<input id="s" type="submit" name="submit" onclick="f1()">
+					<input class="btn btn-default" id="s" type="submit" name="submit" onclick="f1()">
 				</div>
 						
     </form>
     <script type="text/javascript">
     	function f1()
     	{
-    		alert('Thank you for your valuable feedback')
+        var name=document.getElementById('name').value;
+        var state=document.getElementById('state').value;
+        var email=document.getElementById('n0').value;
+        var feed=document.getElementById('n1').value;
+      var email1 = "https://maheshcr7.000webhostapp.com/mail1.php?mail="+email+"&name="+name+"&state="+state;
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET',email1, true);
+        xhr.send();
+    		alert('Thank you for your valuable feedback');
     	}
     </script>
 </body>

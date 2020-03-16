@@ -68,6 +68,7 @@ ob_flush();
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+     <link rel="stylesheet" type="text/css" href="style3.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
@@ -87,16 +88,81 @@ background-color: #01579B;
 .container{
   background-color: #B3E5FC;
 }
+  .bg1-image {
+  /* The image used */
+  background-image: url("images/c2.jpg");
   
+      /* Add the blur effect */
+ 
+  
+  
+  /* Full height */
+  padding-top: 5%;
+  padding-bottom: 7%;
+  height: 50%; 
+  width: 100%;
+  position:relative;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  .s{
+    margin-left: 22%;
+    margin-right: 0%;
+    align-content: center;
+    font-style: bold;
+    font-size: 60px;
+    color: black;
+  }
+  .t1{
+    margin-left: 4%;
+    margin-right: 8%;
+    font-style: bold;
+    font-size: 30px;
+    color: black;
+  }
+  .si{
+    margin-left: 8%;
+    margin-right: 10%;
+    align-content: center;
+    font-style: bold;
+    font-size: 15px;
+    color: white;
+  }
+        .bg-image {
+  /* The image used */
+  /* The image used */
+  background-image: url("images/b.png");
+  border-radius: 50px;
+  
+      /* Add the blur effect */
+ 
+  
+  
+  /* Full height */
+  height: 10%; 
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding-top: 1%;
+  padding-bottom: 30%;
+  position:relative;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
       </style>
 </head>
-<body>
-<div class="container">
-    <h1 class="heading text-center" > Time Table Management System </h1>
+<body class="bg1-image">
+<div class="bg-image">
+    <h1 class="s" style="font-size: 350%;"> Time Table Management System </h1>
     <hr size="20" width="80%" align="center" color="green">
     <!-- Trigger the modal with a button -->
-    <div class="text-center">
-  <button type="button" class="btn btn-info btn-lg"  data-toggle="modal" data-target="#myModal">Check Time Table</button></div>
+<div>
+  <a style="margin-left: 40%;margin-top: 5%;" data-toggle="modal" data-target="#myModal"  ><figure><br></br><figcaption > <b><p style="font-size: 20px; color: white; margin-bottom: 20%; margin-top: 5%">Check Time Table</p></b></figcaption></figure></a></div>
 
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">

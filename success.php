@@ -90,12 +90,12 @@ background-color: #01579B;
       <a><p style="color: black;font-size: 300%;">Course Management<br></p></a>
     </div>
     <ul style ="margin-right: 50%;margin-left:1px;margin-top: 5%;">
-    <li class="col" style="border-radius: 50px;margin-right: 50%;padding-left: 5%"><a href="faculty_add_remove.php"><p style="color: white;font-size: 150%;">Add/Remove Faculty</p></a></li>
-      <li class="col" style="border-radius: 50px;margin-right: 50%;padding-left: 5%"><a href="course_add_remove.php"><p style="color: white;font-size: 150%;">Add/Remove Courses</p></a></li>
-      <li class="col" style="border-radius: 50px;margin-right: 50%;padding-left: 5%"><a href="Department_add_remove.php"><p style="color: white;font-size: 150%;">Add/Remove Department</p></a></li>
-      <li class="col"style="border-radius: 50px;margin-right: 50%;padding-left: 5%"><a href="Room.php"><p style="color: white;font-size: 150%;">Add ClassRoom/Lab</p></a></li>
-      <li class="col"style="border-radius: 50px;margin-right: 50%;padding-left: 5%"><a href="sem_select.php"><p style="color: white;font-size: 150%;">Add New Semester</p></a></li>
-      <li class="col" style="border-radius: 50px;margin-right: 50%;padding-left: 5%"><a href="index1.php"><p style="color: white;font-size: 150%;">Logout</p></a></li>
+    <li class="col" style="border-radius: 50px;margin-right: 50%;padding-left: 5%" id="ac"><a href="faculty_add_remove.php"><p style="color: white;font-size: 150%;">Add/Remove Faculty</p></a></li>
+      <li class="col" style="border-radius: 50px;margin-right: 50%;padding-left: 5%" id="ac1"><a href="course_add_remove.php"><p style="color: white;font-size: 150%;">Add/Remove Courses</p></a></li>
+      <li class="col" style="border-radius: 50px;margin-right: 50%;padding-left: 5%" id="ac2"><a href="Department_add_remove.php"><p style="color: white;font-size: 150%;">Add/Remove Department</p></a></li>
+      <li class="col"style="border-radius: 50px;margin-right: 50%;padding-left: 5%" id="ac3"><a href="Room.php"><p style="color: white;font-size: 150%;">Add ClassRoom/Lab</p></a></li>
+      <li class="col"style="border-radius: 50px;margin-right: 50%;padding-left: 5%" id="ac4"><a href="sem_select.php"><p style="color: white;font-size: 150%;">Add New Semester</p></a></li>
+      <li class="col" style="border-radius: 50px;margin-right: 50%;padding-left: 5%" id="ac5"><a href="index1.php"><p style="color: white;font-size: 150%;">Logout</p></a></li>
     </ul>
   </div>
 </nav>

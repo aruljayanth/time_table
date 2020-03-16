@@ -11,6 +11,7 @@ $section=$_SESSION["section"];
 $course_id=$_SESSION["course_id"];
 $row=5;
 $col=4;
+echo '<body class="bg1-image">';
 echo"<div class=\"container\">";
     echo "<table class=\"table table-bordered\">";
     for($i=0;$i<=$row;$i++)
@@ -116,6 +117,7 @@ vertical-align: middle; background-color: #FFCC80;\">";
     }
     echo "</table>";  
     echo"</div>";
+    echo '</body>';
   if(isset($_REQUEST['submit1'])){
   $val=$_POST['valz'];
 
@@ -154,8 +156,71 @@ background-color: #01579B;
 }
 .container{
   background-color: #B3E5FC;
+  margin-bottom: 10%;
 }
-    
+    .bg1-image {
+  /* The image used */
+  background-image: url("images/c2.jpg");
+  
+      /* Add the blur effect */
+ 
+  
+  
+  /* Full height */
+  padding-bottom: 75%;
+  height: 50%; 
+  width: 100%;
+  position:relative;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  .s{
+    margin-left: 12%;
+    margin-right: 8%;
+    align-content: center;
+    font-style: bold;
+    font-size: 60px;
+    color: black;
+  }
+  .t1{
+    margin-left: 4%;
+    margin-right: 8%;
+    font-style: bold;
+    font-size: 30px;
+    color: black;
+  }
+  .si{
+    margin-left: 8%;
+    margin-right: 10%;
+    align-content: center;
+    font-style: bold;
+    font-size: 15px;
+    color: white;
+  }
+        .bg-image {
+  /* The image used */
+  background-image: url("images/b.png");
+  border-radius: 50px;
+  margin-bottom: 50px;
+      /* Add the blur effect */
+ 
+  
+  
+  /* Full height */
+  height: 10%; 
+  width: 90%;
+  margin-left: 5%;
+  padding-top: 5%;
+  margin-top: 5%;
+  padding-bottom: 5%;
+  position:relative;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
       </style>
 </head>
 <body>

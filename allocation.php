@@ -187,7 +187,9 @@ ob_flush();
          font-size: 20px;
     	}
     	.hello1{
- 	font-size:20px;
+ 	font-size:25px;
+  margin-left: 40%;
+  color: black;
 
  }
 
@@ -201,31 +203,97 @@ background-color: #01579B;
 .container{
   background-color: #B3E5FC;
 }
-
+.sz{
+  color: white;
+  font-size: 20px;
+}
+.bg1-image {
+  /* The image used */
+  background-image: url("images/c2.jpg");
+  
+      /* Add the blur effect */
+ 
+  
+  
+  /* Full height */
+  padding-bottom: 75%;
+  height: 50%; 
+  width: 100%;
+  position:relative;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  .s{
+    margin-left: 12%;
+    margin-right: 8%;
+    align-content: center;
+    font-style: bold;
+    font-size: 60px;
+    color: black;
+  }
+  .t1{
+    margin-left: 4%;
+    margin-right: 8%;
+    font-style: bold;
+    font-size: 30px;
+    color: black;
+  }
+  .si{
+    margin-left: 8%;
+    margin-right: 10%;
+    align-content: center;
+    font-style: bold;
+    font-size: 15px;
+    color: white;
+  }
+        .bg-image {
+  /* The image used */
+  background-image: url("images/b.png");
+  border-radius: 50px;
+  margin-bottom: 50px;
+      /* Add the blur effect */
+ 
+  
+  
+  /* Full height */
+  height: 10%; 
+  width: 90%;
+  margin-left: 5%;
+  padding-top: 5%;
+  margin-top: 5%;
+  padding-bottom: 5%;
+  position:relative;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
     </style>
 </head>
-<body>
-<div class="container">
-		<h1 class="heading text-center" > Add The Slot </h1>
+<body class="bg1-image">
+<div class="bg-image">
+		<h1 class="s text-center" > Add The Slot </h1>
 		<hr size="20" width="75%" align="center" color="green">
 		<div>
-		<label class="hello1"> Day:&nbsp;&nbsp </label><label><?php echo $day_id; ?></label></div>
+		<label class="hello1"> Day:&nbsp;&nbsp </label><label class="sz"><?php echo $day_id; ?></label></div>
 		
 		<div>
-		<label class="hello1"> Slot:&nbsp;&nbsp </label><label><?php echo $slot_id; ?></label></div>
+		<label class="hello1"> Slot:&nbsp;&nbsp </label><label class="sz"><?php echo $slot_id; ?></label></div>
 		<div>
-		<label class="hello1"> Department Name:&nbsp;&nbsp </label><label><?php echo $department_name; ?></label></div>
+		<label class="hello1"> Department Name:&nbsp;&nbsp </label><label class="sz"><?php echo $department_name; ?></label></div>
 		<div>
-		<label class="hello1"> Section:&nbsp;&nbsp </label><label><?php echo $section; ?></label></div>
+		<label class="hello1"> Section:&nbsp;&nbsp </label><label class="sz"><?php echo $section; ?></label></div>
 		<div>
-		<label class="hello1"> Semester:&nbsp;&nbsp </label><label><?php echo $semester ?></label></div>
+		<label class="hello1"> Semester:&nbsp;&nbsp </label><label class="sz"><?php echo $semester ?></label></div>
 		<div>
-		<label class="hello1"> Year:&nbsp;&nbsp </label><label><?php echo $year; ?></label></div>
+		<label class="hello1"> Year:&nbsp;&nbsp </label><label class="sz"><?php echo $year; ?></label><br><br></div>
 
-		<label for="type"  ><strong>Enter the Particulars :</strong></label>
+		<label for="type" class="t1" ><strong>Enter the Particulars :</strong></label>
 		<form action="" method="POST">
 		<div class="form-row">
-			<div class="form-group col-md-6">
+			<div class="si col-md-10">
                 <label for="dname">Course Id</label>
                 <select class="form-control" name="courseid" placeholder="choose" required>
                 	<option value="" disabled selected>Choose</option>
@@ -234,7 +302,7 @@ background-color: #01579B;
                 <br>
                 
             </div>
-            <div class="form-group col-md-6">
+            <div class="si col-md-10">
                 <label for="dname">Class/Lab:</label>
                 <select class="form-control" name="class_lab" placeholder="choose" required>
                 	<option value="" disabled selected>Choose</option>
@@ -245,7 +313,7 @@ background-color: #01579B;
                 
             </div>
             
-               <div class="form-group col-md-12">
+               <div class="si col-md-10">
                 <label for="dname">Block</label>
                 <select class="form-control" name="block" placeholder="choose" required>
                 	<option value="" disabled selected>Choose</option>
@@ -256,10 +324,12 @@ background-color: #01579B;
             </div>
             
         <div class=" form-group col-md-12">
-        <button class="btn btn-default" type="submit" name="submit1">Show room</button>
+        <div class=" modal-footer d-flex center-block justify-content-center ">
+        <button class="btn btn-default" type="submit" name="submit1">Show Room</button>
+      </div>
       </div>
    
-<div class="form-group col-md-12">
+<div class="si col-md-10">
                 <label for="dname">Room/lab Number:</label>
                 <select class="form-control" name="room_no" placeholder="choose">
                   <option value="" disabled selected>Choose</option>

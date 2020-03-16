@@ -110,6 +110,7 @@ background-color: #01579B;
   /* Full height */
   height: 100%; 
   width: 100%;
+  padding-bottom: 50%;
   position:relative;
   /* Center and scale the image nicely */
   background-position: center;
@@ -117,7 +118,7 @@ background-color: #01579B;
   background-size: cover;
   }
   .si{
-    margin-left: 2%;
+    margin-left: 8%;
     margin-right: 8%;
     align-content: center;
   }
@@ -131,6 +132,7 @@ background-color: #01579B;
   
   
   /* Full height */
+  margin-top: 5%;
   height: 10%; 
   width: 90%;
   margin-left: 5%;
@@ -154,7 +156,7 @@ background-color: #01579B;
 				
 
 
-            <div class="si col-md-5">
+            <div class="si col-md-10">
                 <label for="dname"><p style="font-style: bold;font-size: 15px;color: white;">Department Name</p></label>
                 <select class="form-control" id="d_name" name="d_name" placeholder="choose" required>
                 	<option value="" disabled selected>Choose</option>
@@ -164,7 +166,7 @@ background-color: #01579B;
 
                 
             </div>
-            <div class="si col-md-5">
+            <div class="si col-md-10">
         <label for="t_no"><p style="font-style: bold;font-size: 15px;color: white;">Teacher's Name</p></label>
         <select class="form-control" id="d_name" name="t_num" placeholder="choose" required>
                   <option value="" disabled selected>Choose</option>
@@ -172,7 +174,7 @@ background-color: #01579B;
                 </select>
                 <br>
         </div> 
-        <div class="si col-md-5">
+        <div class="si col-md-10">
         <label for="t_no"><p style="font-style: bold;font-size: 15px;color: white;">Semester</p></label>
         <select class="form-control" id="d_name" name="sem" placeholder="choose" required>
                   <option value="" disabled selected>Choose</option>

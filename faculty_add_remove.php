@@ -102,7 +102,7 @@ background-color: #01579B;
             <div class="col-md-6"><div class="text-center">
   <button type="submit" class="btn btn-info btn-lg" id="abcd" name="submit">Add Details</button></div></div>
   <div class="col-md-6"><div class="text-center">
-  <button type="submit" class="btn btn-info btn-lg"  name="submit1">Remove Details</button></div>
+  <button type="submit" class="btn btn-info btn-lg" id="abcd1" name="submit1">Remove Details</button></div>
 </div>
 
 

@@ -45,6 +45,7 @@ ob_flush();
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+     <link rel="stylesheet" type="text/css" href="style3.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
@@ -95,6 +96,8 @@ background-color: #01579B;
   width: 90%;
   margin-left: 5%;
   margin-bottom: 5%;
+  padding-top: 1%;
+  padding-bottom: 30%;
   position:relative;
   /* Center and scale the image nicely */
   background-position: center;
@@ -105,12 +108,11 @@ background-color: #01579B;
 </head>
 <body class="bg1-image">
 <div class="bg-image" style="margin-top: 10%">
-    <h1 class="heading text-center" > Time Table Management System </h1>
+    <h1 class="heading text-center" style="color: black;" > Time Table Management System </h1>
     <hr size="20" width="80%" align="center" color="green"><br><br><br>
-    <!-- Trigger the modal with a button -->
-    <div class="text-center">
-  <button type="button" class="btn btn-info btn-lg"  data-toggle="modal" data-target="#myModal">Check Time Table</button></div>
-
+    <!-- Trigger the modal with a button -->  
+  <div>
+  <a style="margin-left: 40%" data-toggle="modal" data-target="#myModal"  ><figure><br></br><figcaption > <b><p style="font-size: 20px; color: white; margin-bottom: 20%; margin-top: 5%">Check Time Table</p></b></figcaption></figure></a></div>
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
     <form action="" method="POST">

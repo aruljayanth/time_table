@@ -75,6 +75,7 @@ ob_flush();
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+     <link rel="stylesheet" type="text/css" href="style3.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
@@ -101,6 +102,7 @@ background-color: #01579B;
   /* Full height */
   height: 100%; 
   width: 100%;
+  padding-bottom: 19%;
   position:relative;
   /* Center and scale the image nicely */
   background-position: center;
@@ -126,12 +128,12 @@ background-color: #01579B;
   
   
   /* Full height */
-  height: 10%; 
+  height: 100%; 
   width: 90%;
   margin-left: 5%;
-  margin-top: 2%;
-  padding-top: 0.1%;
-  padding-bottom: 9%;
+  margin-top: 5%;
+  padding-top: 1%;
+  padding-bottom: 4%;
   position:relative;
   /* Center and scale the image nicely */
   background-position: center;
@@ -143,13 +145,17 @@ background-color: #01579B;
 <body class="bg1-image">
 
 <div class="bg-image">
-    <h1 class="heading text-center" style="margin-bottom: 10px"> Time Table Management System </h1>
+    <h1 class="heading text-center" style="margin-bottom: 8px"> Time Table Management System </h1>
     <hr size="20" width="80%" align="center" color="green">
-    <div class="form-row" style="padding-top: 5%;"> 
-            <div class="col-md-6"><div class="text-center">
-  <button type="button" class="btn btn-info btn-lg" id="clgid" data-toggle="modal" data-target="#modalLoginForm">College Admin</button></div></div>
-  <div class="col-md-6"><div class="text-center">
-  <button type="button" class="btn btn-info btn-lg" id="deptid" data-toggle="modal" data-target="#modalLoginForm1">Department Admin</button></div>
+    <div class="form-row" style="padding-top: 5%;margin-bottom:4% "> 
+
+      <div class="form-group col-md-6">
+  <a style="margin-left: 40%" data-toggle="modal" data-target="#modalLoginForm" id="deptid" ><figure><br></br><figcaption > <b><p style="font-size: 20px; color: white; margin-bottom: 15%; margin-top: 5%">Department Admin</p></b></figcaption></figure></a></div>
+
+  <div class="form-group col-md-4">
+  <a style="margin-left: 40%" data-toggle="modal" data-target="#modalLoginForm1" id="clgid" ><figure><br></br><figcaption > <b><p style="font-size: 20px; color: white; margin-bottom: 23%;padding-top: 8%; margin-top: 3%;">College Admin</p></b></figcaption></figure></a></div>
+
+
 </div>
 </div>
 
@@ -230,7 +236,7 @@ background-color: #01579B;
       </div>
       </form>
     </div>
-
+    <br><br>
   </div>
 </div>
 

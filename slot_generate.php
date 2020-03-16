@@ -36,27 +36,87 @@ background-color: #01579B;
 .container{
   background-color: #B3E5FC;
 }
+.bg1-image {
+  /* The image used */
+  background-image: url("images/c2.jpg");
+  
+      /* Add the blur effect */
+ 
+  
+  
+  /* Full height */
+  padding-bottom: 7%;
+  height: 50%; 
+  width: 100%;
+  position:relative;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  .s{
+    margin-left: 10%;
+    margin-right: 8%;
+    align-content: center;
+    font-style: bold;
+    font-size: 60px;
+    color: black;
+  }
+  .t1{
+    margin-left: 4%;
+    margin-right: 8%;
+    font-style: bold;
+    font-size: 30px;
+    color: black;
+  }
+  .si{
+    margin-left: 8%;
+    margin-right: 10%;
+    align-content: center;
+    font-style: bold;
+    font-size: 15px;
+    color: black;
+  }
+        .bg-image {
+  /* The image used */
+  background-image: url("images/b.png");
+  border-radius: 50px;
+  margin-bottom: 50px;
+      /* Add the blur effect */
+ 
+  
+  
+  /* Full height */
+  height: 10%; 
+  width: 90%;
+  margin-left: 5%;
+  padding-top: 1%;
+  margin-top: 5%;
+  padding-bottom: 6%;
+  position:relative;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
     </style>
 </head>
-<body>
-	<div class="container">
-		<h1 class="heading text-center" > Add Slot Details </h1>
+<body class="bg1-image">
+	<div class="bg-image">
+		<h1 class="s text-center" > Add Slot Details </h1>
 		<hr size="20" width="75%" align="center" color="green">
-		<label for="type" class="hello" ><strong>Enter the Particulars :</strong></label>
+		<label class="t1" style="margin-left: 15%"><strong>Enter the Particulars :</strong></label>
 		<form action="" method="POST">
 			
 		<div class="form-row">
-			<div class="form-group col-md-12">
-			<label for="t_no">No of slots:</label></div>
-				<div class="form-group col-md-8">
-				<input type="number" class="form-control" name="n_slot" id="n" placeholder="enter the no of slots" required>
+			<div class="si col-md-10">
+			<label for="t_no" style="margin-left: 15%;font-size: 20px;padding-bottom: 3%">No of slots:</label></div>
+				<div class="si col-md-8">
+				<input type="number" style="margin-left: 20%" class="si col-md-10" name="n_slot" id="n" min="1" max="4" placeholder="Enter the no of slots" required>
 				</div> 
-				<div class="form-group col-md-4">
-      <div class="center-block justify-content-center">
+        <div style="margin-left: 50%;padding-top: 5%">
         <button class="btn btn-default" type="button" name="submit" onclick="addMoreRows()">Next</button>
       </div>
-  </div>
-
 		</div>
 	</form>
 	<form id="slots">
@@ -76,7 +136,7 @@ function addMoreRows() {
 
         if(window.flag==1)
         {
-        	 window.location="success.php";
+        	 window.location="success1.php";
         }
       }
       

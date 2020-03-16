@@ -100,9 +100,9 @@ background-color: #01579B;
     <form action="" method="POST">
     <div class="form-row">
             <div class="col-md-6"><div class="text-center">
-  <button type="submit" class="btn btn-info btn-lg"  name="submit">Add Details</button></div></div>
+  <button type="submit" class="btn btn-info btn-lg" id="abcd" name="submit">Add Details</button></div></div>
   <div class="col-md-6"><div class="text-center">
-  <button type="submit" class="btn btn-info btn-lg"  name="submit1">Remove Details</button></div>
+  <button type="submit" class="btn btn-info btn-lg" id="abcd1" name="submit1">Remove Details</button></div>
 </div>
 
 
