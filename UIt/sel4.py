@@ -119,6 +119,7 @@ time.sleep(5)
 
 #add/remove course module
 driver.find_element_by_id('ac1').click()
+time.sleep(2)
 print(driver.current_url)
 time.sleep(2)
 
@@ -140,6 +141,7 @@ time.sleep(5)
 
 #add/remove deparmtment module
 driver.find_element_by_id('ac2').click()
+time.sleep(2)
 print(driver.current_url)
 time.sleep(2)
 
