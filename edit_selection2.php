@@ -124,7 +124,6 @@ ob_flush();
 ?>
 <!DOCTYPE HTML>
 <html lang="en">
-<html>
 <head>
 	<title>Allocate</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"

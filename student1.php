@@ -15,7 +15,8 @@ $year=$_SESSION["year"];
 
 
 
-<html>
+<!DOCTYPE HTML>
+<html lang="en">
 <head>
     <title>Student</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -36,7 +37,7 @@ $year=$_SESSION["year"];
 
   background-repeat: no-repeat;
   background-size:cover;
-  
+
 }
 .container{
   background-color: #B3E5FC;
@@ -46,13 +47,13 @@ $year=$_SESSION["year"];
       .bg1-image {
   /* The image used */
   background-image: url("images/c2.jpg");
-  
+
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
-  height: 100%; 
+  height: 100%;
   width: 100%;
   margin-bottom: 25%;
   position:relative;
@@ -70,7 +71,7 @@ $year=$_SESSION["year"];
  /*<span class="comments">//get number of columns inputted through text box
  </span>*/
 $col=4;
-     /*<span class="comments">//create a table in php 
+     /*<span class="comments">//create a table in php
      </span>*/
      //border='1' width='350px'
     echo "<table  class=\"table table-bordered\">";
@@ -96,7 +97,7 @@ $col=4;
           # code...
           break;
       }
-      
+
       echo"</th>";
       for($j=1;$j<=$col;$j++)
       {
@@ -106,7 +107,7 @@ vertical-align: middle;\">";
  echo "<label>";
           echo $j;
           echo "<br>";
-         
+
           switch ($j) {
             case '1': echo "10:00 AM - 11:00 AM";
               # code...
@@ -139,9 +140,9 @@ vertical-align: middle;\">";
 
       echo "<td style=\"display:inline-block;width:25%;height:120px;background-color: #FFCC80;text-align: center;
 vertical-align: middle;\">
-      
+
       <label style=\" margin-top:25px;\">free</label></td>";
-      
+
       }
       else{
     $get_details="SELECT * FROM timing where department_name='$department_name' and year='$year' and semester='$semester' and section='$section' and slot='$j' and day='$i'";
@@ -153,7 +154,7 @@ vertical-align: middle;\">
     $get_teachername="SELECT teacher_name from teacher where teacher_id='".$row['teacher_id']."'";
      $get2=mysqli_query($conn, $get_teachername);
     $row2 = mysqli_fetch_assoc($get2);
-    
+
         echo "<td style=\"display:inline-block;width:25%;height:120px;background-color: #FFA726;text-align: center;
 vertical-align: middle;\">";
        echo $row['course_id'];
@@ -170,15 +171,15 @@ vertical-align: middle;\">";
      }                 /* <span class="comments">//close row
                        </span>*/
       echo "</tr>";
-      
+
     }
      /*  <span class="comments">//close table
        </span>*/
-    echo "</table>";  
+    echo "</table>";
     ?>
 
     <div style="text-align: center;">
-     <form method="post"> 
+     <form method="post">
     <input id="down" type="submit" name="download" value="Download" onclick="f()">
     </form>
   </div>
@@ -191,4 +192,3 @@ vertical-align: middle;\">";
   </script>
   </body>
   </html>
-  

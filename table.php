@@ -33,7 +33,7 @@ echo"<div class=\"container\">";
           # code...
           break;
       }
-      
+
       echo"</th>";
       for($j=1;$j<=$col;$j++)
       {
@@ -46,7 +46,7 @@ vertical-align: middle;\">";
 echo "<label>";
           echo $j;
           echo "<br>";
-         
+
           switch ($j) {
             case '1': echo "10:00 AM - 11:00 AM";
               # code...
@@ -97,7 +97,7 @@ vertical-align: middle; background-color: #FFCC80;\"><form method=\"POST\">
     $get_teachername="SELECT teacher_name from teacher where teacher_id in (SELECT teacher_id FROM fac_course WHERE section = '".$row['section']."' AND course_id='".$row['course_id']."')";
      $get2=mysqli_query($conn, $get_teachername);
     $row2 = mysqli_fetch_assoc($get2);
-    
+
         echo "<td style=\"display:inline-block;width:25%;height:120px;text-align: center;
 vertical-align: middle; background-color: #FFCC80;\">";
        echo $row['course_id'];
@@ -113,9 +113,9 @@ vertical-align: middle; background-color: #FFCC80;\">";
 
 }
       }
-      echo "</tr>"; 
+      echo "</tr>";
     }
-    echo "</table>";  
+    echo "</table>";
     echo"</div>";
     echo '</body>';
   if(isset($_REQUEST['submit1'])){
@@ -132,7 +132,8 @@ ob_flush();
 
 
 
-<html>
+<!DOCTYPE HTML>
+<html lang="en">
 <head>
     <title>Allocate</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -152,7 +153,7 @@ ob_flush();
 background-color: #01579B;
   background-repeat: no-repeat;
   background-size:cover;
-  
+
 }
 .container{
   background-color: #B3E5FC;
@@ -161,14 +162,14 @@ background-color: #01579B;
     .bg1-image {
   /* The image used */
   background-image: url("images/c2.jpg");
-  
+
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
   padding-bottom: 75%;
-  height: 50%; 
+  height: 50%;
   width: 100%;
   position:relative;
   /* Center and scale the image nicely */
@@ -205,11 +206,11 @@ background-color: #01579B;
   border-radius: 50px;
   margin-bottom: 50px;
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
-  height: 10%; 
+  height: 10%;
   width: 90%;
   margin-left: 5%;
   padding-top: 5%;

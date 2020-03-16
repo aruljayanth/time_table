@@ -39,7 +39,8 @@ mysqli_close($conn);
 ob_flush();
 
 ?>
-<html>
+<!DOCTYPE HTML>
+<html lang="en">
 <head>
     <title>Student</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"

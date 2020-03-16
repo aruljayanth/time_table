@@ -69,9 +69,8 @@ ob_flush();
 
 
 
- <!DOCTYPE HTML>
- <html lang="en">
-<html>
+<!DOCTYPE HTML>
+<html lang="en">
 <head>
 	<title>allocation</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"

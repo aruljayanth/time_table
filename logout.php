@@ -26,7 +26,6 @@ if(mysqli_query($conn, $sql)){
 
 <!DOCTYPE HTML>
 <html lang="en">
-<html>
 <head>
 	<title>logout</title>
 </head>

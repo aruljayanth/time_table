@@ -62,7 +62,8 @@ mysqli_close($conn);
 ob_flush();
 ?>
 
-<html>
+<!DOCTYPE HTML>
+<html lang="en">
 <head>
     <title>Teacher</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -167,7 +168,7 @@ background-color: #01579B;
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
-    
+
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">

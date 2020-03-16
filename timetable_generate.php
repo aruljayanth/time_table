@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 ob_start();
 //echo "<h2>One step away to enter the world ---Stay Connected</h2>";
@@ -6,7 +6,7 @@ $conn = new mysqli("localhost:3306","root","","timetable");
     if($conn->connect_error)
     die("not connected:".$conn->connect_error);
 
-  
+
 $get_department_name="SELECT department_name FROM department";
 $get=mysqli_query($conn, $get_department_name);
 $option = '';
@@ -17,7 +17,7 @@ $option .= '<option value = "'.$row['department_name'].'" type="submit" name="su
 
 
 if (isset($_POST['submit'])){
-    
+
 
     //$teacher_id = mysqli_real_escape_string($conn, $_REQUEST['t_num']);
     //$_SESSION['teacher_id']=$teacher_id;
@@ -30,16 +30,16 @@ if (isset($_POST['submit'])){
     $_SESSION['department_name']=$department_name;
     header("Location:select_section1.php");
 
-    
-    
+
+
 }
 mysqli_close($conn);
 ob_flush();
 ?>
 
 
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html lang="en">
 <head>
 	<title>Time Table</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -54,14 +54,14 @@ ob_flush();
          font-size: 15px;
       }
       .hello1{
-  font-size:15px; 
+  font-size:15px;
  }
  body{
 
 background-color: #01579B;
   background-repeat: no-repeat;
   background-size:cover;
-  
+
 }
 .container{
   background-color: #B3E5FC;
@@ -69,14 +69,14 @@ background-color: #01579B;
 .bg1-image {
   /* The image used */
   background-image: url("images/c2.jpg");
-  
+
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
   padding-bottom: 7%;
-  height: 50%; 
+  height: 50%;
   width: 100%;
   position:relative;
   /* Center and scale the image nicely */
@@ -113,11 +113,11 @@ background-color: #01579B;
   border-radius: 50px;
   margin-bottom: 50px;
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
-  height: 10%; 
+  height: 10%;
   width: 90%;
   margin-left: 5%;
   padding-top: 2%;
@@ -146,7 +146,7 @@ background-color: #01579B;
                 </select>
                 <br>
 
-                
+
             </div>
             <div class="si col-md-10">
                 <label for="years">Year</label>
@@ -157,16 +157,16 @@ background-color: #01579B;
                   <option value="3">third</option>
                   <option value="4">fourth</option>
                 </select>
-                
+
                 <br>
-                
+
             </div>
             <div class="form-group col-md-12">
       <div class=" modal-footer d-flex center-block justify-content-center ">
         <button class="btn btn-default" type="submit1" name="submit">Next</button>
       </div>
   </div>
-            
+
         </div>
     </form>
 </div>

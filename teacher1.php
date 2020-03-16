@@ -16,7 +16,8 @@ $teacher_id=$_SESSION["teacher_id"]
 
 
 
-<html>
+<!DOCTYPE HTML>
+<html lang="en">
 <head>
     <title>Teacher</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -36,7 +37,7 @@ $teacher_id=$_SESSION["teacher_id"]
 background-color: #01579B;
   background-repeat: no-repeat;
   background-size:cover;
-  
+
 }
 .container{
   background-color: #B3E5FC;
@@ -44,14 +45,14 @@ background-color: #01579B;
       .bg1-image {
   /* The image used */
   background-image: url("images/c2.jpg");
-  
+
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
   padding-bottom: 80%;
-  height: 50%; 
+  height: 50%;
   width: 100%;
   position:relative;
   /* Center and scale the image nicely */
@@ -88,11 +89,11 @@ background-color: #01579B;
   border-radius: 50px;
   margin-bottom: 50px;
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
-  height: 10%; 
+  height: 10%;
   width: 90%;
   margin-left: 5%;
   padding-top: 1%;
@@ -117,7 +118,7 @@ $col=4;
     {
 
       echo "<tr>";
-      
+
       switch ($i) {
         case '1': echo "<th>";echo"Monday";echo"</th>";
         break;
@@ -132,11 +133,11 @@ $col=4;
         break;
         case '6': exit(0);
         default:echo "<th>"; echo "</th>";
-          
+
           break;
       }
-      
-      
+
+
       for($j=1;$j<=$col;$j++)
       {
               if($i == '0'){
@@ -145,7 +146,7 @@ vertical-align: middle;\">";
            echo "<label style=\"margin-top:25px;\">";
           echo $j;
            echo "<br>";
-         
+
           switch ($j) {
             case '1': echo "10:00 AM - 11:00 AM";
               break;
@@ -168,10 +169,10 @@ vertical-align: middle;\">";
 
       echo "<td style=\"display:inline-block;width:25%;height:120px;text-align: center;
 vertical-align: middle;background-color: #FFCC80;\">
-      
+
       <label style=\"text-align: center;
 vertical-align: middle; margin-top:25px;\">free</label></td>";
-      
+
       }
       else{
     $get_details="SELECT * FROM timing where department_name='$department_name'  and teacher_id='$teacher_id' and slot='$j' and day='$i'";
@@ -184,7 +185,7 @@ vertical-align: middle; margin-top:25px;\">free</label></td>";
     $get_teachername="SELECT teacher_name from teacher where teacher_id='".$row['teacher_id']."'";
      $get2=mysqli_query($conn, $get_teachername);
     $row2 = mysqli_fetch_assoc($get2);
-    
+
         echo "<td style=\"display:inline-block;width:25%;height:120px;text-align: center;
 vertical-align: middle;background-color: #FFA726;\">";
        echo $row['course_id'];
@@ -200,19 +201,19 @@ vertical-align: middle;background-color: #FFA726;\">";
        echo $row['roomno'];
       echo "</td>";
 
-      
+
     }
-                
+
                      }
                    }
 
       echo "</tr>";
-      
+
     }
-    echo "</table>";  
+    echo "</table>";
     ?>
   <div style="text-align: center;">
-     <form method="post"> 
+     <form method="post">
     <input class="btn btn-default" id="down" type="submit" name="download" value="Download" onclick="f()">
     </form>
   </div>

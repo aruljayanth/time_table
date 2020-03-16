@@ -34,7 +34,7 @@ echo"<div class=\"container\">";
           # code...
           break;
       }
-      
+
       echo"</th>";
       for($j=1;$j<=$col;$j++)
       {
@@ -45,7 +45,7 @@ vertical-align: middle;\">";
 echo "<label>";
           echo $j;
           echo "<br>";
-         
+
           switch ($j) {
             case '1': echo "10:00 AM - 11:00 AM";
               # code...
@@ -72,7 +72,7 @@ echo "<label>";
               $get_avail="SELECT avail FROM availability where department_name='$department_name' and year='$year' and semester='$semester' and section='$section' and slot='$j' and day='$i'";
     $get=mysqli_query($conn, $get_avail);
     $row = mysqli_fetch_assoc($get);
-      
+
     $get_details="SELECT * FROM timing where department_name='$department_name' and year='$year' and semester='$semester' and section='$section' and slot='$j' and day='$i'";
     $get=mysqli_query($conn, $get_details);
     $row = mysqli_fetch_assoc($get);
@@ -82,12 +82,12 @@ echo "<label>";
     $get_teachername="SELECT teacher_name from teacher where teacher_id='".$row['teacher_id']."'";
      $get2=mysqli_query($conn, $get_teachername);
     $row2 = mysqli_fetch_assoc($get2);
-    
+
         echo "<td style=\"display:inline-block;width:25%;height:140px;text-align: center;
 vertical-align: middle; background-color: #FFCC80;\">";
        echo "<form method=\"POST\"><input type=\"text\" value=$val name=\"valz\" style=display:none;>
       <input style=\"vertical-align: middle; margin-top:1px; \"type=submit name=\"submit1\" value="."Edit"."></form>";
-    
+
        echo $row['course_id'];
        echo "<br>";
        echo $row1['course_name'];
@@ -98,7 +98,7 @@ vertical-align: middle; background-color: #FFCC80;\">";
        echo "</td>";
       }
       }
-      echo "</tr>"; 
+      echo "</tr>";
     }
     echo "</table>";
     echo"</div>";
@@ -118,7 +118,8 @@ ob_flush();
 
 
 
-<html>
+<!DOCTYPE HTML>
+<html lang="en">
 <head>
     <title>Allocate</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -138,7 +139,7 @@ ob_flush();
 background-color: #01579B;
   background-repeat: no-repeat;
   background-size:cover;
-  
+
 }
 .container{
   background-color: #B3E5FC;
@@ -148,14 +149,14 @@ background-color: #01579B;
     .bg1-image {
   /* The image used */
   background-image: url("images/c2.jpg");
-  
+
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
   padding-bottom: 80%;
-  height: 50%; 
+  height: 50%;
   width: 100%;
   position:relative;
   /* Center and scale the image nicely */
@@ -192,11 +193,11 @@ background-color: #01579B;
   border-radius: 50px;
   margin-bottom: 50px;
       /* Add the blur effect */
- 
-  
-  
+
+
+
   /* Full height */
-  height: 10%; 
+  height: 10%;
   width: 90%;
   margin-left: 5%;
   padding-top: 5%;

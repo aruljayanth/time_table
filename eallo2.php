@@ -76,7 +76,6 @@ if(mysqli_query($conn, $sql1)){
 
 <!DOCTYPE HTML>
 <html lang="en">
-<html>
 <head>
 	<title>allocation</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
