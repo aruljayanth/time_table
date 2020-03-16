@@ -20,5 +20,8 @@ password_field = driver.find_element_by_id('defaultForm-pas')
 password_field.send_keys(password)
 
 submit = driver.find_element_by_id('login1').click()
+time.sleep(2)
+print(driver.switch_to_alert().text)
+driver.switch_to_alert().accept()
 print(driver.current_url)
 driver.close()

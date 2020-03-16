@@ -68,7 +68,7 @@ print(driver.current_url)
 driver.back()
 time.sleep(2)
 
-#delete timetable 
+#delete timetable
 driver.find_element_by_id('abc4').click()
 time.sleep(2)
 print(driver.current_url)
@@ -177,7 +177,7 @@ time.sleep(2)
 driver.find_element_by_id('ac5').click()
 print(driver.current_url)
 
-#Feedback 
+#Feedback
 driver.find_element_by_id('ab4').click()
 time.sleep(5)
 print(driver.current_url)
